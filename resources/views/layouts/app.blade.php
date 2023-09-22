@@ -13,7 +13,7 @@
     <header>
     </header>
 
-    <main>
+    <main class="bg-slate-100">
         @yield('content')
     </main>
 
