@@ -11,7 +11,6 @@
 </head>
 <body>
     <header>
-        @include('components.navigation')
     </header>
 
     <main>
