@@ -8,6 +8,6 @@ class UserlistController extends Controller
 {
     public function index()
     {
-        return view('userprofile/listuser');
+        return view('sidebar/listuser');
     }
 }
