@@ -2,8 +2,6 @@
 
 @section('content')
 
-    <h1 class="text-slate-600">Inventori</h1>
-
-
+    <x-sidebar />
 
 @endsection
