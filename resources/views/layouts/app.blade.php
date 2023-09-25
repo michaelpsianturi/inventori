@@ -15,7 +15,7 @@
 
     <main class="bg-slate-100">
         @yield('content')
-    </main>
+    </main>  
 
     <footer>
 
