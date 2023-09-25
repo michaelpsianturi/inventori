@@ -1,4 +1,4 @@
-<div class="w-5/6 bg-white h-14">
+<div class="container bg-white shadow-lg h-14">
     <div class="absolute right-8 top-3">
         <a href="#">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="2 3 20 20" stroke-width="1" stroke="currentColor" class="h-10 w-9">
