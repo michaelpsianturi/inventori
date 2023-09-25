@@ -1,5 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-    <x-sidebar />
+    <div class="flex">
+        <x-sidebar />
+        <x-navigation />
+
+        <div>
+        </div>
+    </div>
 @endsection
