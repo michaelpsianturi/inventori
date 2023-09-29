@@ -16,4 +16,15 @@
             </div>
         </div>
     </div>
+
+    <div>
+        @foreach ($assets as $asset)
+            <tr>
+                <td>{{ $asset->nama_barang }}</td>
+                <td>{{ $asset->harga_barang }}</td>
+                <td>{{ $asset->nomor_seri_barang }}</td>
+                <td>{{ $asset->jumlah_barang }}</td>
+            </tr>
+        @endforeach
+    </div>
 @endsection
