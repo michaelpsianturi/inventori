@@ -12,7 +12,6 @@ class AssetController extends Controller
     public function mount()
     {
         $this->assets = Asset::all();
-
     }
 
     public function render()
