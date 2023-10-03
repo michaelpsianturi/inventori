@@ -3,9 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Asset;
-use Carbon\FactoryImmutable;
 use Faker\Factory as Faker;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class AssetSeeder extends Seeder
