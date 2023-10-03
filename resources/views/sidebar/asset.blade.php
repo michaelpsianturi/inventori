@@ -24,17 +24,16 @@
                           </tr>
                         </thead>
                         <tbody>
-                          @foreach ($assets as $asset)
-                            <tr class="grid grid-cols-4 divide-y">
-                              <td class="py-4 pl-4 pr-3 text-sm font-medium whitespace-nowrap text-gray-90">{{ $asset->nama_barang }}</td>
-                              <td class="px-3 py-4 text-sm text-gray-500 whitespace-nowrap">{{ $asset->harga_barang }}</td>
-                              <td class="px-3 py-4 text-sm text-gray-500 whitespace-nowrap">{{ $asset->nomor_seri_barang }}</td>
-                              <td class="px-3 py-4 text-sm text-gray-500 whitespace-nowrap">{{ $asset->jumlah_barang }}</td>
-                            </tr>
-                          @endforeach
+                            @foreach ($assets as $asset)
+                                <tr class="grid grid-cols-4 bg-white divide-y divide-gray-200">
+                                    <td class="py-4 pl-4 pr-3 text-sm font-medium text-gray-900 whitespace-nowrap sm:pl-6">{{ $asset->nama_barang }}</td>
+                                    <td class="px-3 py-4 text-sm text-gray-500 whitespace-nowrap">{{ $asset->harga_barang }}</td>
+                                    <td class="px-3 py-4 text-sm text-gray-500 whitespace-nowrap">{{ $asset->nomor_seri_barang }}</td>
+                                    <td class="px-3 py-4 text-sm text-gray-500 whitespace-nowrap">{{ $asset->jumlah_barang }}</td>
+                                </tr>
+                            @endforeach
                         </tbody>
-                      </table>
-                      
+                    </table>
                 </div>
             </div>
         </div>
