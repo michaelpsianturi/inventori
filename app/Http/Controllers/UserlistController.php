@@ -3,11 +3,23 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\datauser;
 
 class UserlistController extends Controller
 {
-    public function index()
+
+    public $profile;
+
+    public function mount()
     {
-        return view('sidebar/listuser');
+        $this->profile = datauser::all();
+    }
+
+    public function render()
+    {
+        $profile = datauser::all();
+        return view('sidebar/listuser', [
+            'profile' => $profile,
+        ]);
     }
 }
