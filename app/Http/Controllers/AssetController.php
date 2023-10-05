@@ -17,6 +17,7 @@ class AssetController extends Controller
     public function render()
     {
         $assets = Asset::all();
+        dd($assets);
         return view('sidebar.asset', [
             'assets' => $assets,
         ]);
