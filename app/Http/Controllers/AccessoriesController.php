@@ -18,7 +18,6 @@ class AccessoriesController extends Controller
     public function show ()
     {
         $accessories = accessories::all();
-        dd($accessories);
         return view('sidebar/accessories', [
             'accessories' => $accessories,
         ]);
