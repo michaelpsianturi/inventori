@@ -2,12 +2,25 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\accessories;
 use Illuminate\Http\Request;
 
 class AccessoriesController extends Controller
 {
+
+    public $accessories;
+
+    public function mount()
+    {
+        $this->accessories = accessories::all();
+    }
+
     public function show ()
     {
-        return view('sidebar/accessories');
+        $accessories = accessories::all();
+        dd($accessories);
+        return view('sidebar/accessories', [
+            'accessories' => $accessories,
+        ]);
     }
 }
