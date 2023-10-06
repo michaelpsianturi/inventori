@@ -3,11 +3,12 @@
 @section('content')
     <div class="flex">
         <x-sidebar />
-        
         <div class="w-full">
             <x-navigation />
-            <div class="mt-6">
-                <table class="w-11/12 ml-4 bg-white divide-y rounded-lg table-auto max-w-7xl">
+            <div class="ml-5 mt-7">
+                <h1>Add New</h1>
+                <x-alpine.modal />
+                <table class="w-11/12 mt-4 ml-4 bg-white divide-y rounded-lg table-auto max-w-7xl">
                     <thead>
                       <tr class="grid grid-cols-4">
                         <th class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900">Nama Barang</th>
