@@ -65,10 +65,6 @@
                     <button type="button" x-on:click="open = false" class="rounded-md border border-gray-200 bg-white px-5 py-2.5">
                         Confirm
                     </button>
-
-                    <button type="button" x-on:click="open = false" class="rounded-md border border-gray-200 bg-white px-5 py-2.5">
-                        Cancel
-                    </button>
                 </div>
             </div>
         </div>
