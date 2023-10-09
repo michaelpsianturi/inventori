@@ -18,6 +18,7 @@
                       </tr>
                     </thead>
                     <tbody>
+                        <div class="pt-6 mt4 "></div>
                         @foreach ($accessories as $accessories)
                             <tr class="grid grid-cols-4 bg-white divide-y divide-gray-200">
                                 <td class="py-4 pl-4 pr-3 text-sm font-medium text-gray-900 whitespace-nowrap sm:pl-6">{{ $accessories->nama_barang }}</td>
