@@ -7,7 +7,6 @@
             <x-navigation />
             <div class="ml-5 mt-7">
                 <h1 class="text-2xl">List User</h1>
-                <x-alpine.modal />
                 <table class="w-11/12 mt-4 ml-4 bg-white divide-y rounded-lg table-auto max-w-7xl">
                     <thead>
                       <tr class="grid grid-cols-4 gap-2">
