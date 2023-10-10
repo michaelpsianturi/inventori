@@ -1,6 +1,4 @@
-@extends('layouts.app')
-
-@section('content')
+<x-layouts.app>
     <div class="flex">
         <x-sidebar />
         <div class="w-full">
@@ -9,12 +7,12 @@
                 <h1>Add New</h1>
                 <table class="w-11/12 mt-4 ml-4 bg-white divide-y rounded-lg table-auto max-w-7xl">
                     <thead>
-                      <tr class="grid grid-cols-4">
-                        <th class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900">Nama Barang</th>
-                        <th class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900">Harga</th>
-                        <th class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900">Nomor Seri</th>
-                        <th class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900">Jumlah</th>
-                      </tr>
+                        <tr class="grid grid-cols-4">
+                            <th class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900">Nama Barang</th>
+                            <th class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900">Harga</th>
+                            <th class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900">Nomor Seri</th>
+                            <th class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900">Jumlah</th>
+                        </tr>
                     </thead>
                     <tbody>
                         <div class="pt-6 mt4 "></div>
@@ -31,4 +29,4 @@
             </div>
         </div>
     </div>
-@endsection
+</x-layouts.app>
