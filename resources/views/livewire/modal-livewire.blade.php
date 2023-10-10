@@ -1,5 +1,4 @@
 <x-livewire-modal id="my-modal" title="{{ $title }}">
-    <div class="modal-body">
         <form wire:submit.prevent="submit">
             <div class="form-group">
                 <label for="name">Name</label>
