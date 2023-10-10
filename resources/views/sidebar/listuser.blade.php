@@ -1,6 +1,4 @@
-@extends('layouts.app')
-
-@section('content')
+<x-layouts.app>
     <div class="flex">
         <x-sidebar />
         <div class="w-full">
@@ -9,12 +7,12 @@
                 <h1 class="text-2xl">List User</h1>
                 <table class="w-11/12 mt-4 ml-4 bg-white divide-y rounded-lg table-auto max-w-7xl">
                     <thead>
-                      <tr class="grid grid-cols-4 gap-2">
-                        <th class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900">Nama</th>
-                        <th class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900">Email</th>
-                        <th class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900">No.Telp</th>
-                        <th class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900">Alamat</th>
-                      </tr>
+                        <tr class="grid grid-cols-4 gap-2">
+                            <th class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900">Nama</th>
+                            <th class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900">Email</th>
+                            <th class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900">No.Telp</th>
+                            <th class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900">Alamat</th>
+                        </tr>
                     </thead>
                     <tbody>
                         @foreach ($profile as $profile)
@@ -31,4 +29,4 @@
         </div>
 
     </div>
-@endsection
+</x-layouts.app>
