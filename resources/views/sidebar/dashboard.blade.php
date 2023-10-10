@@ -1,6 +1,4 @@
-@extends('layouts.app')
-
-@section('content')
+<x-layouts.app>
     <div class="flex">
         <x-sidebar />
         <div class="w-full">
@@ -58,4 +56,4 @@
 
         </div>
     </div>
-@endsection
+</x-layouts.app>
