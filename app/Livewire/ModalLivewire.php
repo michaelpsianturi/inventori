@@ -7,13 +7,14 @@ use Livewire\Component;
 class ModalLivewire extends Component
 {
 
-    public $tittle;
-    public $name;
-    public $email;
-
-    public function mount()
+    public function openModal()
     {
-        $this -> tittle = $this -> viewData['tittle'];
+        $this->isOpen = true;
+    }
+
+    public function closeModal()
+    {
+        $this->isOpen = false;
     }
 
     public function render()
