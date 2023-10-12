@@ -2,10 +2,17 @@
 
 namespace App\Livewire;
 
+use App\Models\Asset;
 use Livewire\Component;
 
 class ModalLivewire extends Component
 {
+    public $isOpen;
+
+    public function __construct()
+    {
+        $this->isOpen = false;
+    }
 
     public function openModal()
     {
@@ -19,6 +26,6 @@ class ModalLivewire extends Component
 
     public function render()
     {
-        return view('livewire.modal-livewire');
+        return view('components.livewire.modal-livewire');
     }
 }
