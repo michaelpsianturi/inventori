@@ -6,8 +6,6 @@
             <div class="ml-5 mt-7">
                 <h1 class="text-2xl">Data Asset</h1>
                 @livewire('modal-livewire')
-                <button wire:click="openModal">Buka Modal</button>
-
                 <div class="mt-4">
                     <table class="w-11/12 ml-4 bg-white divide-y rounded-lg table-auto max-w-7xl">
                         <thead>
