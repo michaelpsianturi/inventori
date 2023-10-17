@@ -8,11 +8,16 @@ use App\Models\asset;
 
 class ModalAsset extends Component
 {
-    public bool $showModalAsset = false;
+    public $isOpen = false;
     public $nama_barang = null;
     public $harga_barang = null;
     public $nomor_seri_barang = null;
     public $jumlah_barang = null;
+
+    public function openModal()
+    {
+        $this->isOpen = true;
+    }
 
     public function saveAsset()
     {
@@ -32,8 +37,8 @@ class ModalAsset extends Component
         ]);
 
         $this->resetFields();
-        $this->showModalAsset = false;
-
+        $this->isOpen = false;
+        return redirect()->to('/asset');
     }
 
 
@@ -43,14 +48,6 @@ class ModalAsset extends Component
         $this->harga_barang = '';
         $this->nomor_seri_barang = '';
         $this->jumlah_barang = '';
-    }
-
-
-
-    public function archive()
-    {
-        // dd($this->showModalAsset);
-        $this->showModalAsset = true;
     }
 
     public function render()
