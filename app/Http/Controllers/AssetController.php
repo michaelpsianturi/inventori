@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Asset;
 
 class AssetController extends Controller
@@ -13,6 +12,22 @@ class AssetController extends Controller
     {
         $this->assets = Asset::all();
     }
+
+    public function delete($id)
+{
+    $asset = Asset::where('id', $id)->first();
+
+    if ($asset) {
+        $asset->delete();
+
+        $this->assets = Asset::all();
+        $this->dispatch('alert', [
+            'type' => 'success',
+            'message' => 'Data berhasil dihapus.',
+        ]);
+    }
+}
+
 
     public function render()
     {
