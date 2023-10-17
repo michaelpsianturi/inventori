@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UserlistController;
 use App\Http\Controllers\AccessoriesController;
-use App\Http\Controllers\AssetController;
+use App\Livewire\Assetlist;
 
 Route::get('/', function () {
     return view('welcome');
@@ -12,5 +12,5 @@ Route::get('/', function () {
 
 Route::get('/dashboard', [DashboardController::class, 'index']);
 Route::get('/listuser', [UserlistController::class, 'render']);
-Route::get('/asset', [AssetController::class, 'render']);
+Route::get('/asset', [Assetlist::class]);
 Route::get('/accessories', [AccessoriesController::class, 'show']);
