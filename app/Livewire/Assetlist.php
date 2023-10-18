@@ -8,6 +8,12 @@ use App\Models\asset;
 class Assetlist extends Component
 {
     public $assets;
+    public $showModal = false;
+
+    public function openModal()
+    {
+        $this->showModal = true;
+    }
 
     public function mount()
     {
