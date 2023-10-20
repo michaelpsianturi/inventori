@@ -2,7 +2,7 @@
     <button wire:click="openModal" class="rounded-md bg-white px-5 py-2.5 shadow mt-3 ml-4">Add New Item</button>
 
     @if($isOpen)
-        <x-modal wire:click="closeModal" x-data={}>
+        <x-modal>
             <x-slot name="title" class="modal-content">
                 <h1>{{ __('Add Asset') }}</h1>
             </x-slot>
