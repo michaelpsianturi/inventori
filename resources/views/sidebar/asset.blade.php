@@ -28,7 +28,8 @@
                                     <button wire:click="openDropdown" class="p-2 bg-teal-200 rounded-md btn btn-danger">
                                         Details
                                     </button>
-                                    <a href="{{ route('assets.update', $asset) }}">
+                                    
+                                    <a href="/asset/formupdate/{{ $asset->id }}">
                                         <button class="p-2 bg-yellow-200 rounded-md btn btn-danger">
                                             Edit
                                         </button>
