@@ -3,7 +3,7 @@
         <x-sidebar />
         <div class="w-full">
             <x-navigation />
-            <div class="ml-5 mt-7">
+            <div class="ml-60 mt-7">
                 <h1 class="ml-4 text-2xl">Asset Data</h1>
                 @livewire('modal-asset')
                 <div class="inline-block min-w-full py-2 mt-4 align-middle bg-white rounded-md sm:px-6 lg:px-8">
@@ -28,12 +28,13 @@
                                     <button wire:click="openDropdown" class="p-2 bg-teal-200 rounded-md btn btn-danger">
                                         Details
                                     </button>
-
-                                    <button wire:click="openDropdown" class="p-2 bg-yellow-200 rounded-md btn btn-danger">
-                                        Edit
-                                    </button>
+                                    <a href="{{ route('assets.update', $asset) }}">
+                                        <button class="p-2 bg-yellow-200 rounded-md btn btn-danger">
+                                            Edit
+                                        </button>
+                                    </a>
                                     
-                                    <button wire:click="openDropdown" class="p-2 bg-blue-200 rounded-md btn btn-danger">
+                                    <button wire:click="delete({{ $asset->id }})" class="p-2 bg-blue-200 rounded-md btn btn-danger">
                                         Delete
                                     </button>
                                 </td>

@@ -25,6 +25,7 @@ class Assetlist extends Component
         }
     }
 
+    
 
     public function render()
     {

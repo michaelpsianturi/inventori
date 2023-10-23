@@ -7,7 +7,7 @@
                 <h1>{{ __('Add Asset') }}</h1>
             </x-slot>
 
-            <x-slot name="content" class="">
+            <x-slot name="content">
                 <div class="sm:col-span-4">
                     <h2 for="nama-asset" class="block text-sm font-medium leading-6 text-gray-900">Nama Asset</h2>
                     <div class="mt-2">
