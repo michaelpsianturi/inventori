@@ -15,4 +15,4 @@ Route::get('/dashboard', [DashboardController::class, 'index']);
 Route::get('/listuser', [UserlistController::class, 'render']);
 Route::get('/asset', Assetlist::class);
 Route::get('/accessories', [AccessoriesController::class, 'show']);
-// Route::get('/asset/formupdate', Assetupdate::class);
+Route::get('/asset/formupdate/{id}', Assetupdate::class);
