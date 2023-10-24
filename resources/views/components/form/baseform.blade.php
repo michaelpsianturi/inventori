@@ -8,7 +8,7 @@
                     {{ $title }}
                 </h2>
                 
-                <div class="grid grid-cols-1 mt-10 gap-x-6 gap-y-8 sm:grid-cols-6">
+                <div class="grid grid-cols-1 mt-10 gap-x-6 gap-y-8">
                     {{ $content }}
                 </div>
                 <!-- Buttons -->

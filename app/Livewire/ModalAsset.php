@@ -19,9 +19,14 @@ class ModalAsset extends Component
         $this->isOpen = true;
     }
 
+    public function closeModal()
+    {
+        $this->resetFields();
+        $this->isOpen = false;
+    }
+
     public function saveAsset()
     {
-
         $this->validate([
             'nama_barang' => 'required',
             'harga_barang' => 'required|numeric',
