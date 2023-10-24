@@ -3,8 +3,15 @@
 
     @if($isOpen)
         <x-modal>
-            <x-slot name="title" class="modal-content">
-                <h1>{{ __('Add Asset') }}</h1>
+            <x-slot name="title">
+                <div wire:click="closeModal" class="flex justify-between">
+                    <h1>{{ __('Add Asset') }}</h1>
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
             </x-slot>
 
             <x-slot name="content">

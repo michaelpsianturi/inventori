@@ -1,12 +1,12 @@
 <x-layouts.app>
     <div class="flex">
         <x-sidebar />
-        <div class="w-full">
+        <div class="w-full ml-60">
             <x-navigation />
             <div class="ml-5 mt-7">
-                <h1 class="ml-4 text-2xl">Accessories data</h1>
+                <h1 class="text-2xl">Accessories data</h1>
                 <div class="inline-block min-w-full py-2 mt-4 align-middle bg-white rounded-md sm:px-6 lg:px-8">
-                    <table class="min-w-full divide-y divide-gray-300">
+                    <table class="w-11/12 mt-4 ml-4 bg-white divide-y rounded-lg table-auto max-w-7xl">
                         <thead>
                             <tr>
                                 <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-0">Nama Barang</th>
