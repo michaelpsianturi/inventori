@@ -1,7 +1,7 @@
 <x-layouts.app>
     <div class="flex">
         <x-sidebar />
-        <div class="w-full">
+        <div class="w-full ml-60">
             <x-navigation />
             <div class="ml-5 mt-7">
                 <h1 class="text-2xl">List User</h1>
