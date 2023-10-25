@@ -7,6 +7,7 @@ use App\Models\datauser;
 
 class Userupdate extends Component
 {
+    public $key;
     public $id;
     public $nama_pengguna;
     public $email;
@@ -45,6 +46,7 @@ class Userupdate extends Component
 
     public function render()
     {
+        $this->key = 'userupdate-key';
         return view('livewire.user.userupdate');
     }
 }

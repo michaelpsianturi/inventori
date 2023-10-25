@@ -7,6 +7,7 @@ use App\Models\asset;
 
 class Assetupdate extends Component
 {
+    public $key;
     public $id;
     public $nama_barang;
     public $harga_barang;
@@ -47,6 +48,7 @@ class Assetupdate extends Component
 
     public function render()
     {
+        $this->key = 'assetupdate-key';
         return view('livewire.asset.assetupdate');
     }
 }
