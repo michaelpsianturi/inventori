@@ -22,6 +22,8 @@ class Assetupdate extends Component
         $this->harga_barang = $asset->harga_barang;
         $this->nomor_seri_barang = $asset->nomor_seri_barang;
         $this->jumlah_barang = $asset->jumlah_barang;
+
+        $this->key = 'assetupdate-key';
     }
 
 
@@ -48,7 +50,6 @@ class Assetupdate extends Component
 
     public function render()
     {
-        $this->key = 'assetupdate-key';
         return view('livewire.asset.assetupdate');
     }
 }

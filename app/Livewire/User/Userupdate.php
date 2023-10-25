@@ -22,6 +22,8 @@ class Userupdate extends Component
         $this->email = $datauser->email;
         $this->phone_number = $datauser->phone_number;
         $this->alamat = $datauser->alamat;
+
+        $this->key = 'userupdate-key';
     }
 
     public function update()
@@ -41,12 +43,12 @@ class Userupdate extends Component
             'alamat' => $this->alamat
         ]);
 
-        return redirect()->to('/asset');
+        return redirect()->to('/listuser');
     }
 
     public function render()
     {
-        $this->key = 'userupdate-key';
+
         return view('livewire.user.userupdate');
     }
 }
