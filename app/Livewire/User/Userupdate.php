@@ -17,7 +17,7 @@ class Userupdate extends Component
     public function mount()
     {
         $this->id = request()->route('id');
-        $datauser = Datauser::find($this->id);
+        $datauser = datauser::find($this->id);
         $this->nama_pengguna = $datauser->nama_pengguna;
         $this->email = $datauser->email;
         $this->phone_number = $datauser->phone_number;
@@ -35,14 +35,14 @@ class Userupdate extends Component
             'alamat' => 'required'
         ]);
 
-        $datauser = Datauser::find($this->id);
+        $datauser = datauser::find($this->id);
         $datauser->update([
             'nama_pengguna' => $this->nama_pengguna,
             'email' => $this->email,
             'phone_number' => $this->phone_number,
             'alamat' => $this->alamat
         ]);
-
+        // dd($this);
         return redirect()->to('/listuser');
     }
 

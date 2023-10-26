@@ -18,17 +18,25 @@
                         </thead>
                         <tbody>
                             <div class="pt-6 mt4 "></div>
-                            @foreach ($accessories as $accessories)
+                            @foreach ($Accessories as $Accessories)
                             <tr>
-                                <td class="py-4 pl-4 pr-3 text-sm font-medium text-gray-900 whitespace-nowrap sm:pl-0">{{ $accessories->nama_barang }}</td>
-                                <td class="px-1 py-4 text-sm text-gray-500 whitespace-nowrap">{{ $accessories->harga_barang }}</td>
-                                <td class="px-5 py-4 text-sm text-gray-500 whitespace-nowrap">{{ $accessories->nomor_seri_barang }}</td>
-                                <td class="px-8 py-4 text-sm text-gray-500 whitespace-nowrap">{{ $accessories->jumlah_barang }}</td>
-                                <td class="relative py-4 pl-3 pr-4 text-sm font-medium text-right whitespace-nowrap sm:pr-0">
-                                    <button wire:click="delete({{ $accessories->id }})" class="btn btn-danger">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
-                                        </svg>
+                                <td class="py-4 pl-4 pr-3 text-sm font-medium text-gray-900 whitespace-nowrap sm:pl-0">{{ $Accessories->nama_barang }}</td>
+                                <td class="px-1 py-4 text-sm text-gray-500 whitespace-nowrap">{{ $Accessories->harga_barang }}</td>
+                                <td class="px-5 py-4 text-sm text-gray-500 whitespace-nowrap">{{ $Accessories->nomor_seri_barang }}</td>
+                                <td class="px-8 py-4 text-sm text-gray-500 whitespace-nowrap">{{ $Accessories->jumlah_barang }}</td>
+                                <td class="relative flex justify-center gap-3 py-4 text-sm font-medium whitespace-nowrap sm:pr-0">
+                                    <button wire:click="openDropdown" class="p-2 bg-teal-200 rounded-md btn btn-danger">
+                                        Details
+                                    </button>
+                                    
+                                    <a href="/accessories/formupdateaccessories/{{ $Accessories->id }}">
+                                        <button class="p-2 bg-yellow-200 rounded-md btn btn-danger">
+                                            Edit
+                                        </button>
+                                    </a>
+                                    
+                                    <button wire:click="delete({{ $Accessories->id }})" class="p-2 bg-blue-200 rounded-md btn btn-danger">
+                                        Delete
                                     </button>
                                 </td>
                             </tr>

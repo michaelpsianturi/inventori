@@ -13,7 +13,7 @@
             </x-slot>
             
             <x-slot name="footer">
-                <button wire:submit='update' class="p-2 bg-gray-300">Update</button>
+                <button wire:click='update' class="p-2 bg-gray-300">Save Update</button>
             </x-slot>
         </div>
     </x-form.baseform>
