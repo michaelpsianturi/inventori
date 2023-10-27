@@ -1,9 +1,9 @@
 <x-layouts.app>
     <div class="flex">
         <x-sidebar />
-        <div class="w-full ml-60">
+        <div class="w-full">
             <x-navigation />
-            <div class="ml-5 mt-7">
+            <div class="ml-64 mt-7">
                 <h1 class="text-2xl">Accessories data</h1>
                 <div class="inline-block min-w-full py-2 mt-4 align-middle bg-white rounded-md sm:px-6 lg:px-8">
                     <table class="w-11/12 mt-4 ml-4 bg-white divide-y rounded-lg table-auto max-w-7xl">

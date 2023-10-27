@@ -1,5 +1,5 @@
 <div>
-    <x-form.baseform>
+    <x-baseupdate.layout>
         <div>
             <x-slot name="title">
                 <h2>Update Data</h2>
@@ -16,5 +16,5 @@
                 <button wire:click="update">Update</button>
             </x-slot>
         </div>
-    </x-form.baseform>
+    </x-baseupdate.layout>
 </div>

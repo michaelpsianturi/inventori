@@ -1,9 +1,9 @@
 <x-layouts.app>
     <div class="flex">
         <x-sidebar />
-        <div class="w-full ml-60">
+        <div class="w-full">
             <x-navigation />
-            <div class="ml-5 mt-7">
+            <div class="ml-64 mt-7">
                 <h1 class="text-2xl">List User</h1>
                 @livewire('User.Modaluser')
                 <div class="inline-block min-w-full py-2 mt-4 align-middle bg-white rounded-md sm:px-6 lg:px-8">

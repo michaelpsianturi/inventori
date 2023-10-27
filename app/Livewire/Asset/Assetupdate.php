@@ -44,7 +44,7 @@ class Assetupdate extends Component
             'jumlah_barang' => $this->jumlah_barang
         ]);
 
-        // return redirect()->to('/asset');
+        return redirect()->to('/asset');
     }
 
     public function render()
