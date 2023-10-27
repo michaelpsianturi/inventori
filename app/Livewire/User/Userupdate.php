@@ -16,12 +16,12 @@ class Userupdate extends Component
 
     public function mount($id)
     {
-        $dataUser = DataUser::findOrFail($id);
-        $this->id = $dataUser->id;
-        $this->nama_pengguna = $dataUser->nama_pengguna;
-        $this->email = $dataUser->email;
-        $this->phone_number = $dataUser->phone_number;
-        $this->alamat = $dataUser->alamat;
+        $profile = DataUser::findOrFail($id);
+        $this->id = $profile->id;
+        $this->nama_pengguna = $profile->nama_pengguna;
+        $this->email = $profile->email;
+        $this->phone_number = $profile->phone_number;
+        $this->alamat = $profile->alamat;
     }
 
     public function rules()
