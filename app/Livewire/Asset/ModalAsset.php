@@ -4,14 +4,22 @@ namespace App\Livewire\Asset;
 
 use Livewire\Component;
 use App\Models\asset;
-
+use Livewire\Attributes\Rule;
 
 class ModalAsset extends Component
 {
     public $isOpen = false;
+    #[Rule('required', message: 'harap di isi namanya')]
+    #[Rule('min:3', message:'masih kurang minima lagi 3')]
     public $nama_barang = null;
+    #[Rule('required', message: 'harap di isi harganya')]
+    #[Rule('min:3', message:'masih kurang minima lagi 3')]
     public $harga_barang = null;
+    #[Rule('required', message: 'harap di isi nomor serinya')]
+    #[Rule('min:3', message:'masih kurang minima lagi 3')]
     public $nomor_seri_barang = null;
+    #[Rule('required', message: 'harap di isijumlahnya')]
+    #[Rule('min:3', message:'masih kurang minima lagi 3')]
     public $jumlah_barang = null;
 
     public function openModal()
@@ -21,8 +29,8 @@ class ModalAsset extends Component
 
     public function closeModal()
     {
-        $this->resetFields();
         $this->isOpen = false;
+        return redirect()->to('/asset');
     }
 
     public function saveAsset()
