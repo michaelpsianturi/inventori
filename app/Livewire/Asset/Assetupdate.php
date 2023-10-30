@@ -30,10 +30,10 @@ class Assetupdate extends Component
     public function update()
     {
         $this->validate([
-            'nama_barang' => 'required',
+            'nama_barang' => 'required|min:3',
             'harga_barang' => 'required|numeric',
             'nomor_seri_barang' => 'required',
-            'jumlah_barang' => 'required|numeric',
+            'jumlah_barang' => 'required|numeric|min:1',
         ]);
 
         $asset = Asset::find($this->id);

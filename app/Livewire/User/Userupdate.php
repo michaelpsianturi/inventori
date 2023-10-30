@@ -2,21 +2,27 @@
 
 namespace App\Livewire\User;
 
+use Livewire\Attributes\Rule;
 use Livewire\Component;
 use App\Models\datauser;
 
 class Userupdate extends Component
 {
+    public datauser $datausers;
     public $id;
-    public $nama_pengguna;
-    public $email;
-    public $phone_number;
-    public $alamat;
+    #[Rule('required|min:3', onUpdate: false)]
+    public $nama_pengguna= '';
+    #[Rule('required|min:3|unique', onUpdate: false)]
+    public $email = '';
+    #[Rule('required|min:10|numeric', onUpdate: false)]
+    public $phone_number = '';
+    #[Rule('required|min:3', onUpdate: false)]
+    public $alamat = '';
     public $key = 'userupdate-key';
 
     public function mount($id)
     {
-        $profile = DataUser::findOrFail($id);
+        $profile = datauser::findOrFail($id);
         $this->id = $profile->id;
         $this->nama_pengguna = $profile->nama_pengguna;
         $this->email = $profile->email;
@@ -24,26 +30,18 @@ class Userupdate extends Component
         $this->alamat = $profile->alamat;
     }
 
-    public function rules()
-    {
-        return [
-            'nama_pengguna' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:profile,email,' . $this->id],
-            'phone_number' => ['required', 'integer', 'max:255'],
-            'alamat' => ['required', 'string'],
-        ];
-    }
-
     public function update()
     {
-        $dataUser = DataUser::findOrFail($this->id);
-        $dataUser->update([
+        $validated = $this->validate();
+        datauser::updated($validated);
+        $profile = datauser::findOrFail($this->id);
+        $profile->update([
             'nama_pengguna' => $this->nama_pengguna,
             'email' => $this->email,
             'phone_number' => $this->phone_number,
             'alamat' => $this->alamat,
         ]);
-        return redirect()->to('/listuser');
+            return redirect()->to('/listuser');
     }
 
     public function render()

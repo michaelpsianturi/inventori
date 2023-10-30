@@ -4,11 +4,11 @@
         <div class="w-full">
             <x-navigation />
             <div class="p-2 mx-4 mt-3 bg-white rounded-md shadow-lg ml-60">
-                <h2 class="text-lg font-semibold leading-7 text-gray-900">
+                <div class="font-semibold text-gray-900">
                     {{ $title }}
-                </h2>
+                </div>
                 
-                <div class="grid grid-cols-1 mt-10 gap-x-6 gap-y-8">
+                <div class="grid grid-cols-1 mt-10 gap-x-6 gap-y-4">
                     {{ $content }}
                 </div>
                 <!-- Buttons -->
