@@ -11,16 +11,14 @@ class Assetupdate extends Component
     public $key;
     public $id;
     #[Rule('required', message: 'harap di isi namanya')]
-    #[Rule('min:3', message:'masih kurang minima lagi 3')]
     public $nama_barang;
     #[Rule('required', message: 'harap di isi harganya')]
-    #[Rule('min:3', message:'masih kurang minima lagi 3')]
+    #[Rule('min:2', message:'masih kurang minima lagi 3')]
     public $harga_barang;
     #[Rule('required', message: 'harap di isi nomor serinya')]
     #[Rule('min:3', message:'masih kurang minima lagi 3')]
     public $nomor_seri_barang;
     #[Rule('required', message: 'harap di isijumlahnya')]
-    #[Rule('min:3', message:'masih kurang minima lagi 3')]
     public $jumlah_barang;
 
     public function mount()
@@ -38,13 +36,7 @@ class Assetupdate extends Component
 
     public function update()
     {
-        $this->validate([
-            'nama_barang' => 'required|min:3',
-            'harga_barang' => 'required|numeric',
-            'nomor_seri_barang' => 'required|min:3',
-            'jumlah_barang' => 'required|integer|min:1',
-        ]);
-
+        $this->validate();
         $asset = Asset::find($this->id);
         $asset->update([
             'nama_barang' => $this->nama_barang,

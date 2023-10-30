@@ -10,17 +10,17 @@ class ModalAsset extends Component
 {
     public $isOpen = false;
     #[Rule('required', message: 'harap di isi namanya')]
-    #[Rule('min:3', message:'masih kurang minima lagi 3')]
+    #[Rule('min:2', message:'masih kurang minimal lagi 3')]
     public $nama_barang = null;
     #[Rule('required', message: 'harap di isi harganya')]
-    #[Rule('min:3', message:'masih kurang minima lagi 3')]
+    #[Rule('min:3', message:'masih kurang minimal lagi 3')]
     public $harga_barang = null;
     #[Rule('required', message: 'harap di isi nomor serinya')]
-    #[Rule('min:3', message:'masih kurang minima lagi 3')]
+    #[Rule('min:3', message:'masih kurang minimal lagi 3')]
     public $nomor_seri_barang = null;
     #[Rule('required', message: 'harap di isijumlahnya')]
-    #[Rule('min:3', message:'masih kurang minima lagi 3')]
-    public $jumlah_barang = null;
+    #[Rule('min:1', message:'harap di isi')]
+    public $jumlah_barang = '';
 
     public function openModal()
     {
@@ -35,12 +35,7 @@ class ModalAsset extends Component
 
     public function saveAsset()
     {
-        $this->validate([
-            'nama_barang' => 'required',
-            'harga_barang' => 'required|numeric',
-            'nomor_seri_barang' => 'required',
-            'jumlah_barang' => 'required|numeric',
-        ]);
+        $this->validate();
 
         asset::create([
             'nama_barang' => $this->nama_barang,
