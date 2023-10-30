@@ -10,14 +10,18 @@ class Assetupdate extends Component
 {
     public $key;
     public $id;
+
     #[Rule('required', message: 'harap di isi namanya')]
     public $nama_barang;
+
     #[Rule('required', message: 'harap di isi harganya')]
     #[Rule('min:2', message:'masih kurang minima lagi 3')]
     public $harga_barang;
+
     #[Rule('required', message: 'harap di isi nomor serinya')]
     #[Rule('min:3', message:'masih kurang minima lagi 3')]
     public $nomor_seri_barang;
+
     #[Rule('required', message: 'harap di isijumlahnya')]
     public $jumlah_barang;
 
