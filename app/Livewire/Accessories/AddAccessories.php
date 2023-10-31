@@ -3,18 +3,19 @@
 namespace App\Livewire\Accessories;
 
 use Livewire\Component;
-use App\Models\accessories;
 use Livewire\Attributes\Rule;
+use App\Models\accessories;
 
-class Accessoriesupdate extends Component
+class AddAccessories extends Component
 {
-    public $id;
+    public $isOpen = false;
 
     #[Rule('required', message:'Nama Barang harus di isi')]
     #[Rule('min:2', message:'Nama Barang minimal 2 karakter')]
     public $nama_barang;
 
     #[Rule('required', message:'Harga Barang harus di isi')]
+    #[Rule('integer', message:'Harga Barang Harus di isi dengan format angka')]
     public $harga_barang;
 
     #[Rule('required', message:'Nomor Seri Barang harus di isi')]
@@ -25,33 +26,41 @@ class Accessoriesupdate extends Component
     #[Rule('integer', message:'Jumlah Barang tidak boleh berupa huruf')]
     public $jumlah_barang;
 
-    public function mount()
+    public function openModal()
     {
-        $this->id = request()->route('id');
-        $accessories = Accessories::find($this->id);
-        $this->nama_barang = $accessories->nama_barang;
-        $this->harga_barang = $accessories->harga_barang;
-        $this->nomor_seri_barang = $accessories->nomor_seri_barang;
-        $this->jumlah_barang = $accessories->jumlah_barang;
+        $this->isOpen = true;
     }
 
-    public function update()
+    public function closeModal()
+    {
+        $this->isOpen = false;
+    }
+
+    private function resetFields()
+    {
+        $this->nama_barang = null;
+        $this->harga_barang = null;
+        $this->nomor_seri_barang = null;
+        $this->jumlah_barang = null;
+    }
+
+    public function savenewData()
     {
         $this->validate();
-        $accessories = Accessories::find($this->id);
-        $accessories->update([
+        accessories::create([
             'nama_barang' => $this->nama_barang,
             'harga_barang' => $this->harga_barang,
             'nomor_seri_barang' => $this->nomor_seri_barang,
-            'jumlah_barang' => $this->jumlah_barang,
+            'jumlah_barang' => $this->jumlah_barang
         ]);
 
+        $this->resetFields();
+        $this->isOpen = false;
         return redirect()->to('/accessories');
     }
 
-
     public function render()
     {
-        return view('livewire.accessories.accessoriesupdate');
+        return view('livewire.accessories.add-accessories');
     }
 }

@@ -35,6 +35,14 @@ class Modaluser extends Component
         $this->isOpen = false;
     }
 
+    private function resetFields()
+    {
+        $this->nama_pengguna = null;
+        $this->email = null;
+        $this->phone_number = null;
+        $this->alamat = null;
+    }
+
     public function saveAsset()
     {
         $this->validate();
@@ -48,14 +56,6 @@ class Modaluser extends Component
         $this->resetFields();
         $this->isOpen = false;
         return redirect()->to('/listuser');
-    }
-
-    private function resetFields()
-    {
-        $this->nama_pengguna = null;
-        $this->email = null;
-        $this->phone_number = null;
-        $this->alamat = null;
     }
 
     public function render()
