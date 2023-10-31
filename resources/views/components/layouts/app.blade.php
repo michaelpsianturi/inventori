@@ -18,6 +18,6 @@
 
     @livewireScripts
     <script src="https://cdn.livewire.dev/livewire.js"></script>
-    @stack('scripts')
+
 </body>
 </html>

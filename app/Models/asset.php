@@ -17,4 +17,5 @@ class asset extends Model
         'nomor_seri_barang',
         'jumlah_barang',
     ];
+    
 }
