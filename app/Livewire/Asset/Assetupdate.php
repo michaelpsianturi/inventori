@@ -28,13 +28,12 @@ class Assetupdate extends Component
     public function mount()
     {
         $this->id = request()->route('id');
-        $asset = asset::find($this->id);
-        $this->nama_barang = $asset->nama_barang;
-        $this->harga_barang = $asset->harga_barang;
-        $this->nomor_seri_barang = $asset->nomor_seri_barang;
-        $this->jumlah_barang = $asset->jumlah_barang;
+        $assets = asset::find($this->id);
+        $this->nama_barang = $assets->nama_barang;
+        $this->harga_barang = $assets->harga_barang;
+        $this->nomor_seri_barang = $assets->nomor_seri_barang;
+        $this->jumlah_barang = $assets->jumlah_barang;
 
-        $this->key = 'assetupdate-key';
     }
 
 

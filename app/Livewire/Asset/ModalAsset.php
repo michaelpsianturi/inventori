@@ -9,15 +9,19 @@ use Livewire\Attributes\Rule;
 class ModalAsset extends Component
 {
     public $isOpen = false;
+
     #[Rule('required', message: 'harap di isi namanya')]
     #[Rule('min:2', message:'masih kurang minimal lagi 3')]
     public $nama_barang = null;
+
     #[Rule('required', message: 'harap di isi harganya')]
     #[Rule('min:3', message:'masih kurang minimal lagi 3')]
     public $harga_barang = null;
+
     #[Rule('required', message: 'harap di isi nomor serinya')]
     #[Rule('min:3', message:'masih kurang minimal lagi 3')]
     public $nomor_seri_barang = null;
+
     #[Rule('required', message: 'harap di isijumlahnya')]
     #[Rule('min:1', message:'harap di isi')]
     public $jumlah_barang = '';

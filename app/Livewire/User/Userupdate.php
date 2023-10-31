@@ -10,20 +10,26 @@ class Userupdate extends Component
 {
     public datauser $datausers;
     public $id;
-    #[Rule('required|min:3', onUpdate: false)]
-    public $nama_pengguna= '';
-    #[Rule('required|min:3|unique', onUpdate: false)]
-    public $email = '';
-    #[Rule('required|min:10|numeric', onUpdate: false)]
-    public $phone_number = '';
-    #[Rule('required|min:3', onUpdate: false)]
-    public $alamat = '';
-    public $key = 'userupdate-key';
 
-    public function mount($id)
+    #[Rule('required', message:'harap di isi')]
+    public $nama_pengguna;
+
+    #[Rule('required', message:'harap di isi')]
+    #[Rule('min:4', message:'menggunakan format email yang bena',)]
+    public $email;
+
+    #[Rule('required', message:'harap di isi')]
+    #[Rule('integer', message:'harap di isi dengan angka')]
+    #[Rule('min:10', message:'minimal 10 angka')]
+    public $phone_number;
+
+    #[Rule('required', message:'harap di isi')]
+    public $alamat;
+
+    public function mount()
     {
-        $profile = datauser::findOrFail($id);
-        $this->id = $profile->id;
+        $this->id = request()->route('id');
+        $profile = datauser::find($this->id);
         $this->nama_pengguna = $profile->nama_pengguna;
         $this->email = $profile->email;
         $this->phone_number = $profile->phone_number;
@@ -32,9 +38,8 @@ class Userupdate extends Component
 
     public function update()
     {
-        $validated = $this->validate();
-        datauser::updated($validated);
-        $profile = datauser::findOrFail($this->id);
+        $this->validate();
+        $profile = datauser::find($this->id);
         $profile->update([
             'nama_pengguna' => $this->nama_pengguna,
             'email' => $this->email,
