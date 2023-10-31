@@ -3,15 +3,27 @@
 namespace App\Livewire\User;
 
 use Livewire\Component;
+use Livewire\Attributes\Rule;
 use App\Models\datauser;
-
 class Modaluser extends Component
 {
     public $isOpen = false;
-    public $nama_pengguna = null;
-    public $email = null;
-    public $phone_number = null;
-    public $alamat = null;
+
+    #[Rule('required', message:'Nama tidak boleh kosong')]
+    #[Rule('min:2', message:'Nama tidak boleh kurang dari dua')]
+    public $nama_pengguna;
+
+    #[Rule('required', message:'harap di isi')]
+    #[Rule('min:4', message:'menggunakan format email yang bena',)]
+    public $email;
+
+    #[Rule('required', message:'harap di isi')]
+    #[Rule('integer', message:'harap di isi dengan angka')]
+    #[Rule('min:10', message:'minimal 10 angka')]
+    public $phone_number;
+
+    #[Rule('required', message:'harap di isi')]
+    public $alamat;
 
     public function openModal()
     {
@@ -25,13 +37,7 @@ class Modaluser extends Component
 
     public function saveAsset()
     {
-        $this->validate([
-            'nama_pengguna' => 'required',
-            'email' => 'required',
-            'phone_number' => 'required|numeric',
-            'alamat' => 'required'
-        ]);
-
+        $this->validate();
         datauser::create([
             'nama_pengguna' => $this->nama_pengguna,
             'email' => $this->email,

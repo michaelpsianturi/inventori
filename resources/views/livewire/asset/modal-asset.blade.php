@@ -19,9 +19,7 @@
                     <h2 for="nama-asset" class="block text-sm font-medium leading-6 text-gray-900">Nama Asset *</h2>
                     <div class="mt-2">
                         <input wire:model="nama_barang" type="text" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 pl-2">
-                        <div>
-                            @error('nama_barang') <span class="text-red-500 eror">{{ $message }}</span> @enderror
-                        </div>
+                        @error('nama_barang') <span class="text-red-500 eror">{{ $message }}</span> @enderror
                     </div>
                 </div>
 
@@ -29,9 +27,7 @@
                     <h2 for="harga_barang" class="block text-sm font-medium leading-6 text-gray-900">Harga *</h2>
                     <div class="mt-2">
                         <input wire:model="harga_barang" id="harga_barang" name="harga_barang" type="text" autocomplete="harga_barang" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 pl-2">
-                        <div>
-                            @error('harga_barang') <span class="text-red-500 eror">{{ $message }}</span> @enderror
-                        </div>
+                        @error('harga_barang') <span class="text-red-500 eror">{{ $message }}</span> @enderror
                     </div>
                 </div>
 
@@ -39,9 +35,7 @@
                     <h2 for="nomor_seri_barang" class="block text-sm font-medium leading-6 text-gray-900">Nomor Seri Barang *</h2>
                     <div class="mt-2">
                         <input wire:model="nomor_seri_barang" id="nomor_seri_barang" name="nomor_seri_barang" type="text" autocomplete="nomor_seri_barang" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 pl-2">
-                        <div>
-                            @error('nomor_seri_barang') <span class="text-red-500 eror">{{ $message }}</span> @enderror
-                        </div>
+                        @error('nomor_seri_barang') <span class="text-red-500 eror">{{ $message }}</span> @enderror
                     </div>
                 </div>
 
@@ -49,9 +43,7 @@
                     <h2 for="total-barang" class="block text-sm font-medium leading-6 text-gray-900">Total Barang *</h2>
                     <div class="mt-2">
                         <input wire:model="jumlah_barang" type="text" name="total-barang" id="total-barang" autocomplete="total-barang" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 pl-2">
-                        <div>
-                            @error('jumlah_barang') <span class="text-red-500 eror">{{ $message }}</span> @enderror
-                        </div>
+                        @error('jumlah_barang') <span class="text-red-500 eror">{{ $message }}</span> @enderror
                     </div>
                 </div>
             </x-slot>
