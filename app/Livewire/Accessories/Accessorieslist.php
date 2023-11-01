@@ -4,32 +4,25 @@ namespace App\Livewire\Accessories;
 
 use Livewire\Component;
 use App\Models\accessories;
+use Livewire\WithPagination;
 
 class Accessorieslist extends Component
 {
-    public $Accessories;
-
-    public function mount()
-    {
-        $this->Accessories = accessories::all();
-    }
+    use WithPagination;
 
     public function delete($id)
     {
         $accessories = accessories::Where('id', $id)->first();
-
         if ($accessories) {
             $accessories->delete();
-            $this->Accessories = accessories::all();
             return redirect()->to('/accessories');
         }
     }
 
     public function render()
     {
-        $Accessories = accessories::all();
         return view('sidebar.accessories', [
-            'Accessories' => $Accessories
+            'Accessories' => accessories::paginate(8)
         ]);
     }
 }

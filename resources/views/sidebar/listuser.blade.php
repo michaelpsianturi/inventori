@@ -41,6 +41,9 @@
                             @endforeach
                         </tbody>
                     </table>
+                    <div class="p-2 border-t-2">
+                        {{ $datausers->links('pagination::simple-tailwind') }}
+                    </div>
                 </div>
             </div>
         </div>

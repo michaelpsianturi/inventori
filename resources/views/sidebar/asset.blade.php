@@ -28,13 +28,13 @@
                                         <button wire:click="openDropdown" class="p-2 bg-teal-200 rounded-md btn btn-danger">
                                             Details
                                         </button>
-                                        
+
                                         <a href="/asset/formupdateasset/{{ $asset->id }}">
                                             <button class="p-2 bg-yellow-200 rounded-md btn btn-danger">
                                                 Edit
                                             </button>
                                         </a>
-                                        
+
                                         <button wire:click="delete({{ $asset->id }})" class="p-2 bg-blue-200 rounded-md btn btn-danger">
                                             Delete
                                         </button>
@@ -43,6 +43,9 @@
                             @endforeach
                         </tbody>
                     </table>
+                    <div class="p-2 border-t-2">
+                        {{ $assets->links('pagination::simple-tailwind') }}
+                    </div>
                 </div>
             </div>
         </div>
