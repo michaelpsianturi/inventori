@@ -9,10 +9,6 @@ use App\Livewire\Accessories\Accessorieslist;
 use App\Livewire\Accessories\Accessoriesupdate;
 use App\Livewire\Dashboard;
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::get('/asset', Assetlist::class);
 Route::get('/asset/formupdateasset/{id}', Assetupdate::class);
 Route::get('/listuser', Userlist::class);
