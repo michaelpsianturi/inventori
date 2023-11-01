@@ -24,7 +24,7 @@
                                         @foreach ($assets as $asset)
                                             <tr>
                                                 <td class="py-4 pl-4 pr-3 text-sm font-medium text-gray-900 whitespace-nowrap sm:pl-0">{{ $asset->nama_barang }}</td>
-                                                <td class="px-1 py-4 text-sm text-gray-500 whitespace-nowrap">{{ $asset->price }}</td>
+                                                <td class="px-1 py-4 text-sm text-gray-500 whitespace-nowrap">{{ $asset->harga_barang }}</td>
                                                 <td class="px-5 py-4 text-sm text-gray-500 whitespace-nowrap">{{ $asset->nomor_seri_barang }}</td>
                                                 <td class="px-8 py-4 text-sm text-gray-500 whitespace-nowrap">{{ $asset->jumlah_barang }}</td>
                                                 <td class="relative flex justify-center gap-3 py-4 text-sm font-medium whitespace-nowrap sm:pr-0">
