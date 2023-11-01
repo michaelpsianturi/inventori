@@ -18,29 +18,28 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <div class="pt-6 mt4 "></div>
                             @foreach ($Accessories as $Accessories)
-                            <tr>
-                                <td class="py-4 pl-4 pr-3 text-sm font-medium text-gray-900 whitespace-nowrap sm:pl-0">{{ $Accessories->nama_barang }}</td>
-                                <td class="px-1 py-4 text-sm text-gray-500 whitespace-nowrap">{{ $Accessories->harga_barang }}</td>
-                                <td class="px-5 py-4 text-sm text-gray-500 whitespace-nowrap">{{ $Accessories->nomor_seri_barang }}</td>
-                                <td class="px-8 py-4 text-sm text-gray-500 whitespace-nowrap">{{ $Accessories->jumlah_barang }}</td>
-                                <td class="relative flex justify-center gap-3 py-4 text-sm font-medium whitespace-nowrap sm:pr-0">
-                                    <button wire:click="openDropdown" class="p-2 bg-teal-200 rounded-md btn btn-danger">
-                                        Details
-                                    </button>
-                                    
-                                    <a href="/accessories/formupdateaccessories/{{ $Accessories->id }}">
-                                        <button class="p-2 bg-yellow-200 rounded-md btn btn-danger">
-                                            Edit
+                                <tr>
+                                    <td class="py-4 pl-4 pr-3 text-sm font-medium text-gray-900 whitespace-nowrap sm:pl-0">{{ $Accessories->nama_barang }}</td>
+                                    <td class="px-1 py-4 text-sm text-gray-500 whitespace-nowrap">{{ $Accessories->harga_barang }}</td>
+                                    <td class="px-5 py-4 text-sm text-gray-500 whitespace-nowrap">{{ $Accessories->nomor_seri_barang }}</td>
+                                    <td class="px-8 py-4 text-sm text-gray-500 whitespace-nowrap">{{ $Accessories->jumlah_barang }}</td>
+                                    <td class="relative flex justify-center gap-3 py-4 text-sm font-medium whitespace-nowrap sm:pr-0">
+                                        <button wire:click="openDropdown" class="p-2 bg-teal-200 rounded-md btn btn-danger">
+                                            Details
                                         </button>
-                                    </a>
-                                    
-                                    <button wire:click="delete({{ $Accessories->id }})" class="p-2 bg-blue-200 rounded-md btn btn-danger">
-                                        Delete
-                                    </button>
-                                </td>
-                            </tr>
+                                        
+                                        <a href="/accessories/formupdateaccessories/{{ $Accessories->id }}">
+                                            <button class="p-2 bg-yellow-200 rounded-md btn btn-danger">
+                                                Edit
+                                            </button>
+                                        </a>
+                                        
+                                        <button wire:click="delete({{ $Accessories->id }})" class="p-2 bg-blue-200 rounded-md btn btn-danger">
+                                            Delete
+                                        </button>
+                                    </td>
+                                </tr>
                             @endforeach
                         </tbody>
                     </table>

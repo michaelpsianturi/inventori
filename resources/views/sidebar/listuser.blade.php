@@ -40,6 +40,7 @@
                                 </tr>
                             @endforeach
                         </tbody>
+                        {{ $datausers->links() }}
                     </table>
                 </div>
             </div>

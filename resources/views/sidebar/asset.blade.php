@@ -42,6 +42,7 @@
                                 </tr>
                             @endforeach
                         </tbody>
+                        {{ $assets->links() }}
                     </table>
                 </div>
             </div>
