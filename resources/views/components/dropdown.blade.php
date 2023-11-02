@@ -1,67 +1,47 @@
+@props(['align' => 'right', 'width' => '48', 'contentClasses' => 'py-1 bg-white', 'dropdownClasses' => ''])
 
-<div class="flex justify-center">
-    <div
-        x-data="{
-            open: false,
-            toggle() {
-                if (this.open) {
-                    return this.close()
-                }
+@php
+switch ($align) {
+    case 'left':
+        $alignmentClasses = 'ltr:origin-top-left rtl:origin-top-right start-0';
+        break;
+    case 'top':
+        $alignmentClasses = 'origin-top';
+        break;
+    case 'none':
+    case 'false':
+        $alignmentClasses = '';
+        break;
+    case 'right':
+    default:
+        $alignmentClasses = 'ltr:origin-top-right rtl:origin-top-left end-0';
+        break;
+}
 
-                this.$refs.button.focus()
+switch ($width) {
+    case '48':
+        $width = 'w-48';
+        break;
+}
+@endphp
 
-                this.open = true
-            },
-            close(focusAfter) {
-                if (! this.open) return
+<div class="relative" x-data="{ open: false }" @click.away="open = false" @close.stop="open = false">
+    <div @click="open = ! open">
+        {{ $trigger }}
+    </div>
 
-                this.open = false
-
-                focusAfter && focusAfter.focus()
-            }
-        }"
-        x-on:keydown.escape.prevent.stop="close($refs.button)"
-        x-on:focusin.window="! $refs.panel.contains($event.target) && close()"
-        x-id="['dropdown-button']"
-        class="relative"
-    >
-        <!-- Button -->
-        <button
-            x-ref="button"
-            x-on:click="toggle()"
-            :aria-expanded="open"
-            :aria-controls="$id('dropdown-button')"
-            type="button"
-            class="flex items-center gap-2 bg-white px-5 py-2.5 rounded-md shadow"
-        >
-            Options
-
-            <!-- Heroicon: chevron-down -->
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-            </svg>
-        </button>
-
-        <!-- Panel -->
-        <div
-            x-ref="panel"
-            x-show="open"
-            x-transition.origin.top.left
-            x-on:click.outside="close($refs.button)"
-            :id="$id('dropdown-button')"
-            class="absolute left-0 w-40 mt-2 bg-white rounded-md shadow-md"
-        >
-            <a href="#" class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left text-sm hover:bg-gray-50 disabled:text-gray-500">
-                New Task
-            </a>
-
-            <a href="#" class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left text-sm hover:bg-gray-50 disabled:text-gray-500">
-                Edit Task
-            </a>
-
-            <a href="#" class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left text-sm hover:bg-gray-50 disabled:text-gray-500">
-                <span class="text-red-600">Delete Task</span>
-            </a>
+    <div x-show="open"
+            x-transition:enter="transition ease-out duration-200"
+            x-transition:enter-start="transform opacity-0 scale-95"
+            x-transition:enter-end="transform opacity-100 scale-100"
+            x-transition:leave="transition ease-in duration-75"
+            x-transition:leave-start="transform opacity-100 scale-100"
+            x-transition:leave-end="transform opacity-0 scale-95"
+            class="absolute z-50 mt-2 {{ $width }} rounded-md shadow-lg {{ $alignmentClasses }} {{ $dropdownClasses }}"
+            style="display: none;"
+            @click="open = false">
+        <div class="rounded-md ring-1 ring-black ring-opacity-5 {{ $contentClasses }}">
+            {{ $content }}
         </div>
     </div>
 </div>
