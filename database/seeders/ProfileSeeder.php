@@ -17,7 +17,7 @@ class ProfileSeeder extends Seeder
         $faker = Faker::create();
 
         foreach (range(1, 10) as $index) {
-            DB::table('profile')->insert([
+            DB::table('datauser')->insert([
                 'nama_pengguna' => $faker->name,
                 'email' => $faker->unique()->safeEmail,
                 'phone_number' => $faker->phoneNumber,
