@@ -40,7 +40,7 @@
                                 </tr>
                             @endforeach
                         </tbody>
-                        {{ $datausers->links() }}
+                        {{ $datausers->links('livewire::tailwind') }}
                     </table>
                 </div>
             </div>
