@@ -42,6 +42,7 @@
                                 </tr>
                             @endforeach
                         </tbody>
+                        {{ $assets->links() }}
                     </table>
                     <div class="p-2 border-t-2">
                         {{ $assets->links('pagination::simple-tailwind') }}

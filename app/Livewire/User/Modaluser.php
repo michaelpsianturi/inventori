@@ -11,19 +11,19 @@ class Modaluser extends Component
 
     #[Rule('required', message:'Nama tidak boleh kosong')]
     #[Rule('min:2', message:'Nama tidak boleh kurang dari dua')]
-    public $nama_pengguna;
+    public $profile_name;
 
     #[Rule('required', message:'harap di isi')]
     #[Rule('min:4', message:'menggunakan format email yang bena',)]
-    public $email;
+    public $profile_email;
 
     #[Rule('required', message:'harap di isi')]
     #[Rule('integer', message:'harap di isi dengan angka')]
     #[Rule('min:10', message:'minimal 10 angka')]
-    public $phone_number;
+    public $profile_phone_number;
 
     #[Rule('required', message:'harap di isi')]
-    public $alamat;
+    public $profile_address;
 
     public function openModal()
     {
@@ -37,20 +37,20 @@ class Modaluser extends Component
 
     private function resetFields()
     {
-        $this->nama_pengguna = null;
-        $this->email = null;
-        $this->phone_number = null;
-        $this->alamat = null;
+        $this->profile_name = null;
+        $this->profile_email = null;
+        $this->profile_phone_number = null;
+        $this->profile_address = null;
     }
 
     public function saveAsset()
     {
         $this->validate();
         datauser::create([
-            'nama_pengguna' => $this->nama_pengguna,
-            'email' => $this->email,
-            'phone_number' => $this->phone_number,
-            'alamat' => $this->alamat,
+            'profile_name' => $this->profile_name,
+            'profile_email' => $this->profile_email,
+            'profile_phone_number' => $this->profile_phone_number,
+            'profile_address' => $this->profile_address,
         ]);
 
         $this->resetFields();
