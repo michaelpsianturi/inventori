@@ -21,10 +21,10 @@ class AssetSeeder extends Seeder
 
         for ($i = 0; $i < 10; $i++) {
             Asset::create([
-                'nama_barang' => $faker->randomElement($assetitem),
-                'harga_barang' => rand(10000, 100000),
-                'nomor_seri_barang' => $faker->numberBetween(1000, 9999),
-                'jumlah_barang' => rand(0, 100),
+                'product_name' => $faker->randomElement($assetitem),
+                'product_price' => rand(10000, 100000),
+                'product_serial_number' => $faker->numberBetween(1000, 9999),
+                'product_stock' => rand(0, 100),
             ]);
         }
     }
