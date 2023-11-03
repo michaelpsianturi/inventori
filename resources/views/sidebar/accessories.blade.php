@@ -17,7 +17,7 @@
                                 <th scope="col" class="relative py-3.5 pl-3 pr-4 sm:pr-0"></th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="divide-y divide-gray-200">
                             @foreach ($Accessories as $Accessories)
                                 <tr>
                                     <td class="py-4 pl-4 pr-3 text-sm font-medium text-gray-900 whitespace-nowrap sm:pl-0">{{ $Accessories->nama_barang }}</td>
@@ -43,6 +43,9 @@
                             @endforeach
                         </tbody>
                     </table>
+                    <div class="p-2 border-t-2">
+                        {{ $Accessories->links('pagination::simple-tailwind') }}
+                    </div>
                 </div>
             </div>
         </div>

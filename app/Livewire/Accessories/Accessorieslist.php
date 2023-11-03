@@ -21,7 +21,7 @@ class Accessorieslist extends Component
     public function render()
     {
         return view('sidebar.accessories', [
-            'Accessories' => accessories::paginate(10)
+            'Accessories' => accessories::paginate(8)
         ]);
     }
 }

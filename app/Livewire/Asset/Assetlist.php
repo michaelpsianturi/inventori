@@ -23,7 +23,7 @@ class Assetlist extends Component
     {
         // dd($assets);
         return view('sidebar.asset', [
-            'assets' => asset::paginate(5)
+            'assets' => asset::paginate(10)
         ]);
     }
 }
