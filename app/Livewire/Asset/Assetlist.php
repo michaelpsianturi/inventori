@@ -8,7 +8,7 @@ use Livewire\WithPagination;
 
 class Assetlist extends Component
 {
-    use  WithPagination;
+    use WithPagination;
 
     public function delete($id)
     {
@@ -21,10 +21,8 @@ class Assetlist extends Component
 
     public function render()
     {
-        // dd($assets);
         return view('sidebar.asset', [
-            'assets' => asset::paginate(10)
+            'assets' => asset::paginate(9)
         ]);
     }
 }
-

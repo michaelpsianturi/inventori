@@ -22,7 +22,7 @@ class Userlist extends Component
     public function render()
     {
         return view('sidebar.listuser', [
-            'datausers' =>  datauser::paginate(10)
+            'datausers' =>  datauser::paginate(9)
         ]);
     }
 }

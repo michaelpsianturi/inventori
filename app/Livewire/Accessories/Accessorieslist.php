@@ -5,6 +5,7 @@ namespace App\Livewire\Accessories;
 use Livewire\Component;
 use App\Models\accessories;
 use Livewire\WithPagination;
+
 class Accessorieslist extends Component
 {
     use WithPagination;
