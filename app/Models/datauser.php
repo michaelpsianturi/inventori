@@ -9,12 +9,12 @@ class datauser extends Model
 {
     use HasFactory;
 
-    protected $table = 'profile';
+    protected $table = 'datauser';
 
     protected $fillable = [
-        'nama_pengguna',
-        'email',
-        'phone_number',
-        'alamat',
+        'profile_name',
+        'profile_email',
+        'profile_phone_number',
+        'profile_address',
     ];
 }

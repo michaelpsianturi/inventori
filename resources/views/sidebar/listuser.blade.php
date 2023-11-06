@@ -19,9 +19,9 @@
                         <tbody class="divide-y divide-gray-200">
                             @foreach ($datausers as $datauser)
                                 <tr>
-                                    <td class="py-4 pl-4 pr-3 text-sm font-medium text-gray-900 whitespace-nowrap sm:pl-0">{{ $datauser->nama_pengguna }}</td>
-                                    <td class="px-1 py-4 text-sm text-gray-500 whitespace-nowrap">{{ $datauser->email }}</td>
-                                    <td class="px-5 py-4 text-sm text-gray-500 whitespace-nowrap">{{ $datauser->phone_number }}</td>
+                                    <td class="py-4 pl-4 pr-3 text-sm font-medium text-gray-900 whitespace-nowrap sm:pl-0">{{ $datauser->profile_name }}</td>
+                                    <td class="px-1 py-4 text-sm text-gray-500 whitespace-nowrap">{{ $datauser->profile_email }}</td>
+                                    <td class="px-5 py-4 text-sm text-gray-500 whitespace-nowrap">{{ $datauser->profile_phone_number }}</td>
                                     <td class="relative flex justify-center gap-3 py-4 text-sm font-medium whitespace-nowrap sm:pr-0">
                                         <button wire:click="openDropdown" class="p-2 bg-teal-200 rounded-md btn btn-danger">
                                             Details
@@ -40,7 +40,6 @@
                                 </tr>
                             @endforeach
                         </tbody>
-                        {{ $datausers->links('livewire::tailwind') }}
                     </table>
                     <div class="p-2 border-t-2">
                         {{ $datausers->links('pagination::simple-tailwind') }}

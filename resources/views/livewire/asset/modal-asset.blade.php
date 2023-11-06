@@ -46,6 +46,14 @@
                         @error('product_stock') <span class="text-red-500 eror">{{ $message }}</span> @enderror
                     </div>
                 </div>
+
+                <div class="col-span-4">
+                    <h2 for="description" class="block text-sm font-medium leading-6 text-gray-900">Description</h2>
+                    <div class="mt-2">
+                        <input wire:model="description" type="text" name="description" id="description" autocomplete="description" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 pl-2">
+                        @error('description') <span class="text-red-500 eror">{{ $message }}</span> @enderror
+                    </div>
+                </div>
             </x-slot>
 
             <x-slot name="footer">

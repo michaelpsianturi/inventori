@@ -16,5 +16,6 @@ class asset extends Model
         'product_price',
         'product_serial_number',
         'product_stock',
+        'description',
     ];
 }

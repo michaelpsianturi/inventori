@@ -43,7 +43,7 @@ class Modaluser extends Component
         $this->profile_address = null;
     }
 
-    public function saveAsset()
+    public function saveUser()
     {
         $this->validate();
         datauser::create([

@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('datauser', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_pengguna');
-            $table->string('email')->unique();
-            $table->string('phone_number');
-            $table->text('alamat');
+            $table->string('profile_name');
+            $table->string('profile_email')->unique();
+            $table->string('profile_phone_number');
+            $table->text('profile_address');
             $table->timestamps();
         });
     }
