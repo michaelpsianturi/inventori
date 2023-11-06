@@ -11,7 +11,7 @@
                         <li class="p-2 ">
                             <div class="text-center">
                                 <h1 class="py-4 text-base bg-teal-100 border-b-2 sm:text-sm rounded-t-xl">TOTAL ASSET</h1>
-                                <h2 class="py-6 text-base bg-white sm:text-base">3</h2>
+                                <h2 class="py-6 text-base bg-white sm:text-base">{{ $assets }}</h2>
                                 <div class="p-2 bg-slate-50">
                                     <h3 class="flex text-base text-left">
                                         TABEL ASSET
@@ -27,7 +27,7 @@
                         <li class="p-2 ">
                             <div class="text-center">
                                 <h1 class="py-4 bg-teal-100 border-b-2 rounded-t-xl">TOTAL USER</h1>
-                                <h2 class="py-6 bg-white">3</h2>
+                                <h2 class="py-6 bg-white">{{ $datausers }}</h2>
                                 <h3 class="flex p-1 text-left bg-slate-50">
                                     TABEL USER
                                     <a href="/listuser" class="ml-4">
@@ -41,7 +41,7 @@
                         <li class="p-2 ">
                             <div class="text-center">
                                 <h1 class="py-4 bg-teal-100 border-b-2 rounded-t-xl">TOTAL ACCESSORIES</h1>
-                                <h2 class="py-6 bg-white">3</h2>
+                                <h2 class="py-6 bg-white">{{ $Accessories }}</h2>
                                 <h3 class="flex p-1 text-left bg-slate-50">
                                     TABEL ACCESSORIES
                                     <a href="/accessories" class="ml-4">
