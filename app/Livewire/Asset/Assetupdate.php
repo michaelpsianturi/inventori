@@ -12,28 +12,30 @@ class Assetupdate extends Component
     public $id;
 
     #[Rule('required', message: 'harap di isi namanya')]
-    public $nama_barang;
+    public $product_name;
 
     #[Rule('required', message: 'harap di isi harganya')]
     #[Rule('min:2', message:'masih kurang minima lagi 3')]
-    public $harga_barang;
+    public $product_price;
 
     #[Rule('required', message: 'harap di isi nomor serinya')]
     #[Rule('min:3', message:'masih kurang minima lagi 3')]
-    public $nomor_seri_barang;
+    public $product_serial_number;
 
     #[Rule('required', message: 'harap di isijumlahnya')]
-    public $jumlah_barang;
+    public $product_stock;
+
+    public $description;
 
     public function mount()
     {
         $this->id = request()->route('id');
         $assets = asset::find($this->id);
-        $this->nama_barang = $assets->nama_barang;
-        $this->harga_barang = $assets->harga_barang;
-        $this->nomor_seri_barang = $assets->nomor_seri_barang;
-        $this->jumlah_barang = $assets->jumlah_barang;
-
+        $this->product_name = $assets->product_name;
+        $this->product_price = $assets->product_price;
+        $this->product_serial_number = $assets->product_serial_number;
+        $this->product_stock = $assets->product_stock;
+        $this->description = $assets->description;
     }
 
 
@@ -42,10 +44,11 @@ class Assetupdate extends Component
         $this->validate();
         $asset = Asset::find($this->id);
         $asset->update([
-            'nama_barang' => $this->nama_barang,
-            'harga_barang' => $this->harga_barang,
-            'nomor_seri_barang' => $this->nomor_seri_barang,
-            'jumlah_barang' => $this->jumlah_barang
+            'product_name' => $this->product_name,
+            'product_price' => $this->product_price,
+            'product_serial_number' => $this->product_serial_number,
+            'product_stock' => $this->product_stock,
+            'description' => $this->description
         ]);
 
         return redirect()->to('/asset');

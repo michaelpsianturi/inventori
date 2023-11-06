@@ -26,6 +26,8 @@ class ModalAsset extends Component
     #[Rule('min:1', message:'harap di isi')]
     public $product_stock = '';
 
+    public $description;
+
     public function openModal()
     {
         $this->isOpen = true;
@@ -47,6 +49,7 @@ class ModalAsset extends Component
             'product_price' => $this->product_price,
             'product_serial_number' => $this->product_serial_number,
             'product_stock' => $this->product_stock,
+            'description' => $this->description
         ]);
 
         $this->resetFields();
@@ -62,6 +65,7 @@ class ModalAsset extends Component
         $this->product_price = '';
         $this->product_serial_number = '';
         $this->product_stock = '';
+        $this->description = '';
     }
 
     public function render()

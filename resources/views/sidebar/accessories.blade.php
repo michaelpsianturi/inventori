@@ -21,10 +21,10 @@
                             <div class="pt-6 mt4 "></div>
                             @foreach ($Accessories as $accessories)
                             <tr>
-                                <td class="py-4 pl-4 pr-3 text-sm font-medium text-gray-900 whitespace-nowrap sm:pl-0">{{ $accessories->nama_barang }}</td>
-                                <td class="px-1 py-4 text-sm text-gray-500 whitespace-nowrap">{{ $accessories->harga_barang }}</td>
-                                <td class="px-5 py-4 text-sm text-gray-500 whitespace-nowrap">{{ $accessories->nomor_seri_barang }}</td>
-                                <td class="px-8 py-4 text-sm text-gray-500 whitespace-nowrap">{{ $accessories->jumlah_barang }}</td>
+                                <td class="py-4 pl-4 pr-3 text-sm font-medium text-gray-900 whitespace-nowrap sm:pl-0">{{ $accessories->accessories_name }}</td>
+                                <td class="px-1 py-4 text-sm text-gray-500 whitespace-nowrap">{{ $accessories->accessories_price }}</td>
+                                <td class="px-5 py-4 text-sm text-gray-500 whitespace-nowrap">{{ $accessories->accessories_serial_number }}</td>
+                                <td class="px-8 py-4 text-sm text-gray-500 whitespace-nowrap">{{ $accessories->accessories_stock }}</td>
                                 <td class="relative flex justify-center gap-3 py-4 text-sm font-medium whitespace-nowrap sm:pr-0">
                                     <button wire:click="openDropdown" class="p-2 bg-teal-200 rounded-md btn btn-danger">
                                         Details

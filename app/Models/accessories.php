@@ -12,9 +12,9 @@ class accessories extends Model
     protected $table = 'accessories';
 
     protected $fillable = [
-        'nama_barang',
-        'harga_barang',
-        'nomor_seri_barang',
-        'jumlah_barang',
+        'accessories_name',
+        'accessories_price',
+        'accessories_serial_number',
+        'accessories_stock',
     ];
 }
