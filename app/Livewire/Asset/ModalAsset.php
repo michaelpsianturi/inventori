@@ -12,23 +12,24 @@ class ModalAsset extends Component
 
     #[Rule('required', message: 'harap di isi namanya')]
     #[Rule('min:2', message:'masih kurang minimal lagi 3')]
-    public $nama_barang = null;
+    public $product_name = null;
 
     #[Rule('required', message: 'harap di isi harganya')]
     #[Rule('min:3', message:'masih kurang minimal lagi 3')]
-    public $harga_barang = null;
+    public $product_price = null;
 
     #[Rule('required', message: 'harap di isi nomor serinya')]
     #[Rule('min:3', message:'masih kurang minimal lagi 3')]
-    public $nomor_seri_barang = null;
+    public $product_serial_number = null;
 
     #[Rule('required', message: 'harap di isijumlahnya')]
     #[Rule('min:1', message:'harap di isi')]
-    public $jumlah_barang = '';
+    public $product_stock = '';
 
     public function openModal()
     {
         $this->isOpen = true;
+        // dd($this->isOpen);
     }
 
     public function closeModal()
@@ -42,24 +43,25 @@ class ModalAsset extends Component
         $this->validate();
 
         asset::create([
-            'nama_barang' => $this->nama_barang,
-            'harga_barang' => $this->harga_barang,
-            'nomor_seri_barang' => $this->nomor_seri_barang,
-            'jumlah_barang' => $this->jumlah_barang,
+            'product_name' => $this->product_name,
+            'product_price' => $this->product_price,
+            'product_serial_number' => $this->product_serial_number,
+            'product_stock' => $this->product_stock,
         ]);
 
         $this->resetFields();
         $this->isOpen = false;
         return redirect()->to('/asset');
+        dd($this->saveAsset);
     }
 
 
     private function resetFields()
     {
-        $this->nama_barang = '';
-        $this->harga_barang = '';
-        $this->nomor_seri_barang = '';
-        $this->jumlah_barang = '';
+        $this->product_name = '';
+        $this->product_price = '';
+        $this->product_serial_number = '';
+        $this->product_stock = '';
     }
 
     public function render()

@@ -12,10 +12,9 @@ class asset extends Model
     protected $table = 'asset';
 
     protected $fillable = [
-        'product_barang',
-        'harga_barang',
-        'nomor_seri_barang',
-        'jumlah_barang',
-        'deskripsi'
+        'product_name',
+        'product_price',
+        'product_serial_number',
+        'product_stock',
     ];
 }
