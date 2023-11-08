@@ -42,7 +42,7 @@
 
                         <li class="p-2 ">
                             <div class="text-center">
-                                <h1 class="py-4 text-base bg-teal-100 border-b-2 md:text-lg sm:text-sm rounded-t-xl">TOTAL ACCESSORIES</h1>
+                                <h1 class="py-4 text-base bg-teal-100 border-b-2 md:text-base sm:text-sm rounded-t-xl">TOTAL ACCESSORIES</h1>
                                 <h2 class="py-6 bg-white">{{ $Accessories }}</h2>
                                 <h3 class="flex p-2 text-left md:text-base sm:text-sm bg-slate-50">
                                     ACCESSORIES
