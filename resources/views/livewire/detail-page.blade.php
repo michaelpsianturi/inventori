@@ -2,7 +2,7 @@
     <x-baseupdate.layout>
         <div>
             <x-slot name="title">
-                <h1 class="text-2xl text-slate-700">Update Asset</h1>
+                <h1 class="text-2xl text-slate-700">Detail {{ $assets->product_name }}</h1>
             </x-slot>
 
             <x-slot name="content">

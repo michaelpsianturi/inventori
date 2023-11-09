@@ -19,7 +19,6 @@ class DetailPage extends Component
     {
         return view('livewire.detail-page', [
             'assets' => $this->assets
-            // dd($this->mount());
         ]);
     }
 }
