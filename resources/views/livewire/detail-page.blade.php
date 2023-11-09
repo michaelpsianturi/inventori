@@ -14,10 +14,9 @@
                     <li>{{ $assets->product_stock }}</li>
                 </ul>
               </div>
-            </x-slot>
+            </x-slot> 
 
             <x-slot name="footer">
-                <button class="p-2 duration-200 rounded-md bg-cyan-400 hover:bg-cyan-600 hover:text-white hover:shadow-lg" wire:click="update">Update</button>
             </x-slot>
         </div>
     </x-baseupdate.layout>
