@@ -8,7 +8,6 @@ use Livewire\Attributes\Rule;
 
 class Assetupdate extends Component
 {
-    public $key;
     public $id;
 
     #[Rule('required', message: 'harap di isi namanya')]
