@@ -18,7 +18,7 @@ class Assetupdate extends Component
     public $product_price;
 
     #[Rule('required', message: 'harap di isi nomor serinya')]
-    #[Rule('min:3', message:'masih kurang minima lagi 3')]
+    #[Rule('min:4', message:'masih kurang minima lagi 4')]
     public $product_serial_number;
 
     #[Rule('required', message: 'harap di isijumlahnya')]
