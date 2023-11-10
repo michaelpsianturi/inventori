@@ -26,7 +26,7 @@ class DetailAsset extends Component
     public function render()
     {
         return view('livewire.asset.detail-asset', [
-            'assets' => $this->assets
+            'assets' => $this->assets,
         ]);
     }
 }

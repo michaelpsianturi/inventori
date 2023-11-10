@@ -25,7 +25,7 @@
                                     <td class="px-5 py-4 text-sm text-gray-500 whitespace-nowrap">{{ $asset->product_serial_number }}</td>
                                     <td class="px-8 py-4 text-sm text-gray-500 whitespace-nowrap">{{ $asset->product_stock }}</td>
                                     <td class="relative flex justify-center gap-3 py-4 text-sm font-medium whitespace-nowrap sm:pr-0">
-                                        <a href="/assets/details/{{ $asset->id }}">
+                                        <a href="/asset/details/{{ $asset->id }}">
                                             <button class="p-2 bg-teal-200 rounded-md btn btn-danger">
                                                 Details
                                             </button>
