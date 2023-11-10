@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Livewire;
+namespace App\Livewire\Asset;
 
 use Livewire\Component;
 use App\Models\asset;
 
-class DetailPage extends Component
+class DetailAsset extends Component
 {
     public $assets;
 
@@ -25,7 +25,7 @@ class DetailPage extends Component
 
     public function render()
     {
-        return view('livewire.detail-page', [
+        return view('livewire.asset.detail-asset', [
             'assets' => $this->assets
         ]);
     }
