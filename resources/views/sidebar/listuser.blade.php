@@ -23,10 +23,12 @@
                                     <td class="px-1 py-4 text-sm text-gray-500 whitespace-nowrap">{{ $datauser->profile_email }}</td>
                                     <td class="px-5 py-4 text-sm text-gray-500 whitespace-nowrap">{{ $datauser->profile_phone_number }}</td>
                                     <td class="relative flex justify-center gap-3 py-4 text-sm font-medium whitespace-nowrap sm:pr-0">
-                                        <button wire:click="openDropdown" class="p-2 bg-teal-200 rounded-md btn btn-danger">
-                                            Details
-                                        </button>
-                                        
+                                        <a href="/listuser/detail/{{ $datauser->id }}">
+                                            <button class="p-2 bg-teal-200 rounded-md btn btn-danger">
+                                                Details
+                                            </button>
+                                        </a>
+
                                         <a href="/listuser/formupdateuser/{{ $datauser->id }}">
                                             <button class="p-2 bg-yellow-200 rounded-md btn btn-danger">
                                                 Edit
