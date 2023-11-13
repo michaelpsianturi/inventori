@@ -21,4 +21,4 @@ Route::get('/listuser/detail/{id}', DetailUser::class);
 Route::get('/accessories', Accessorieslist::class);
 Route::get('/accessories/formupdateaccessories/{id}', Accessoriesupdate::class);
 Route::get('/accessories/detail/{id}', DetailAccessories::class);
-Route::get('/dashboard', Dashboard::class);
+Route::get('/', Dashboard::class);
