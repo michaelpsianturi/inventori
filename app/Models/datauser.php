@@ -17,4 +17,14 @@ class datauser extends Model
         'profile_phone_number',
         'profile_address',
     ];
+
+    public function assets()
+    {
+        return $this->hasMany(asset::class);
+    }
+
+    public function Accessories()
+    {
+        return $this->hasMany(accessories::class);
+    }
 }
