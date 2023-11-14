@@ -21,13 +21,13 @@ Route::get('/listuser/detail/{id}', DetailUser::class);
 Route::get('/accessories', Accessorieslist::class);
 Route::get('/accessories/formupdateaccessories/{id}', Accessoriesupdate::class);
 Route::get('/accessories/detail/{id}', DetailAccessories::class);
-Route::get('/', Dashboard::class);
+Route::get('/dashboard', Dashboard::class);
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
-    Route::get('/dashboard', function () {
+    Route::get('/', function () {
         return view('dashboard');
     })->name('dashboard');
 });

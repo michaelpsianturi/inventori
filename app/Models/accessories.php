@@ -17,4 +17,9 @@ class accessories extends Model
         'accessories_serial_number',
         'accessories_stock',
     ];
+
+    public function datausers()
+    {
+        return $this->belongsTo(profile::class);
+    }
 }

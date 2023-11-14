@@ -18,4 +18,9 @@ class asset extends Model
         'product_stock',
         'description',
     ];
+
+    public function datauser()
+    {
+        return $this->belongsTo(profile::class);
+    }
 }
