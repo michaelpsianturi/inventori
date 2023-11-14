@@ -22,3 +22,12 @@ Route::get('/accessories', Accessorieslist::class);
 Route::get('/accessories/formupdateaccessories/{id}', Accessoriesupdate::class);
 Route::get('/accessories/detail/{id}', DetailAccessories::class);
 Route::get('/', Dashboard::class);
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified',
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});
