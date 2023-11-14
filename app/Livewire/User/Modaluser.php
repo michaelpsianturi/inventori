@@ -18,7 +18,6 @@ class Modaluser extends Component
     public $profile_email;
 
     #[Rule('required', message:'harap di isi')]
-    #[Rule('integer', message:'harap di isi dengan angka')]
     #[Rule('min:10', message:'minimal 10 angka')]
     public $profile_phone_number;
 
