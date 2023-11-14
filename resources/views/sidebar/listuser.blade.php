@@ -18,7 +18,6 @@
                                            <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">Name</th>
                                            <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Email</th>
                                            <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">No.Telp</th>
-                                           <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Stock</th>
                                            <th scope="col" class="relative py-3.5 pl-3 pr-4 sm:pr-6"></th>
                                        </tr>
                                    </thead>
@@ -28,7 +27,6 @@
                                                <td class="py-4 pl-4 pr-3 text-sm font-medium text-gray-900 whitespace-nowrap sm:pl-6">{{ $datauser->profile_name }}</td>
                                                <td class="px-3 py-4 text-sm text-gray-500 whitespace-nowrap">{{ $datauser->profile_email }}</td>
                                                <td class="px-3 py-4 text-sm text-gray-500 whitespace-nowrap">{{ $datauser->profile_phone_number }}</td>
-                                               <td class="px-3 py-4 text-sm text-gray-500 whitespace-nowrap">{{ $datauser->profile_address }}</td>
                                                <td class="relative py-4 pl-3 pr-4 text-sm font-medium text-right whitespace-nowrap sm:pr-6">
                                                     <a href="/listuser/detail/{{ $datauser->id }}">
                                                        <button class="p-2 bg-teal-200 rounded-md btn btn-danger">
