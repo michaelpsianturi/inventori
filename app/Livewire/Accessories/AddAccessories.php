@@ -10,19 +10,19 @@ class AddAccessories extends Component
 {
     public $isOpen = false;
 
-    #[Rule('required', message:'Nama Barang harus di isi')]
-    #[Rule('min:2', message:'Nama Barang minimal 2 karakter')]
+    #[Rule('required')]
+    #[Rule('min:2')]
     public $accessories_name;
 
-    #[Rule('required', message:'Harga Barang harus di isi')]
+    #[Rule('required')]
     public $accessories_price;
 
-    #[Rule('required', message:'Nomor Seri Barang harus di isi')]
-    #[Rule('integer', message:'Nomor Seri Barang Harus di isi dengan format angka')]
+    #[Rule('required')]
+    #[Rule('integer')]
     public $accessories_serial_number;
 
-    #[Rule('required', message:'Jumlah Barang tidak boleh kosong')]
-    #[Rule('integer', message:'Jumlah Barang tidak boleh berupa huruf')]
+    #[Rule('required')]
+    #[Rule('integer')]
     public $accessories_stock;
 
 
