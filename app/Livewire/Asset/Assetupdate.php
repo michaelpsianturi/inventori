@@ -10,18 +10,20 @@ class Assetupdate extends Component
 {
     public $id;
 
-    #[Rule('required', message: 'harap di isi namanya')]
+    #[Rule('required')]
+    #[Rule('min:2')]
     public $product_name;
 
-    #[Rule('required', message: 'harap di isi harganya')]
-    #[Rule('min:2', message:'masih kurang minima lagi 3')]
+    #[Rule('required')]
+    #[Rule('min:3')]
     public $product_price;
 
-    #[Rule('required', message: 'harap di isi nomor serinya')]
-    #[Rule('min:4', message:'masih kurang minima lagi 4')]
+    #[Rule('required')]
+    #[Rule('min:3')]
     public $product_serial_number;
 
-    #[Rule('required', message: 'harap di isijumlahnya')]
+    #[Rule('required')]
+    #[Rule('min:1')]
     public $product_stock;
 
     public $description;

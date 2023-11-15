@@ -10,20 +10,20 @@ class ModalAsset extends Component
 {
     public $isOpen = false;
 
-    #[Rule('required', message: 'harap di isi namanya')]
-    #[Rule('min:2', message:'masih kurang minimal lagi 3')]
+    #[Rule('required')]
+    #[Rule('min:2')]
     public $product_name = null;
 
-    #[Rule('required', message: 'harap di isi harganya')]
-    #[Rule('min:3', message:'masih kurang minimal lagi 3')]
+    #[Rule('required')]
+    #[Rule('min:3')]
     public $product_price = null;
 
-    #[Rule('required', message: 'harap di isi nomor serinya')]
-    #[Rule('min:3', message:'masih kurang minimal lagi 3')]
+    #[Rule('required')]
+    #[Rule('min:3')]
     public $product_serial_number = null;
 
-    #[Rule('required', message: 'harap di isijumlahnya')]
-    #[Rule('min:1', message:'harap di isi')]
+    #[Rule('required')]
+    #[Rule('min:1')]
     public $product_stock = '';
 
     public $description;

@@ -19,9 +19,7 @@
                                             <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Price</th>
                                             <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Serial Number</th>
                                             <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Stock</th>
-                                            <th scope="col" class="relative py-3.5 pl-3 pr-4 sm:pr-6">
-                                            <span class="sr-only">Edit</span>
-                                            </th>
+                                            <th scope="col" class="relative py-3.5 pl-3 pr-4 sm:pr-6"></th>
                                         </tr>
                                     </thead>
                                     <tbody class="bg-white divide-y divide-gray-200">

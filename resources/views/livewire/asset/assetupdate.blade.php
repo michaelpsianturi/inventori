@@ -10,7 +10,7 @@
                     <h2 class="mb-2 -mt-3 text-xl">Nama Barang</h2>
                     <input wire:model="product_name" class="block p-2 w-2/3 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" type="text">
                     <div>
-                        @error('product_name') <span class="eror">{{ $message }}</span> @enderror
+                        @error('product_name') <span class="text-red-500 eror">{{ $message }}</span> @enderror
                     </div>
                 </div>
 
@@ -18,7 +18,7 @@
                     <h2 class="mt-4 mb-2 text-xl">Harga Barang</h2>
                     <input wire:model="product_price" class="block p-2 w-2/3 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" type="number">
                     <div>
-                        @error('product_price') <span class="eror">{{ $message }}</span> @enderror
+                        @error('product_price') <span class="text-red-500 eror">{{ $message }}</span> @enderror
                     </div>
                 </div>
 
@@ -26,7 +26,7 @@
                     <h2 class="mt-4 mb-2 text-xl">No Seri Barang</h2>
                     <input wire:model="product_serial_number" class="block w-2/3 p-2 text-gray-900 border-0 rounded-md shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" type="text">
                     <div>
-                        @error('product_serial_number') <span class="eror">{{ $message }}</span> @enderror
+                        @error('product_serial_number') <span class="text-red-500 eror">{{ $message }}</span> @enderror
                     </div>
                 </div>
 
@@ -34,7 +34,7 @@
                     <h2 class="mt-4 mb-2 text-xl">Jumlah Barang</h2>
                     <input wire:model="product_stock" class="block w-2/3 p-2 text-gray-900 border-0 rounded-md shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" type="number">
                     <div>
-                        @error('product_stock') <span class="eror">{{ $message }}</span> @enderror
+                        @error('product_stock') <span class="text-red-500 eror">{{ $message }}</span> @enderror
                     </div>
                 </div>
 
