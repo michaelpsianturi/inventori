@@ -9,19 +9,20 @@ class Modaluser extends Component
 {
     public $isOpen = false;
 
-    #[Rule('required', message:'Nama tidak boleh kosong')]
-    #[Rule('min:2', message:'Nama tidak boleh kurang dari dua')]
+    #[Rule('required')]
+    #[Rule('min:2',)]
     public $profile_name;
 
-    #[Rule('required', message:'harap di isi')]
-    #[Rule('min:4', message:'menggunakan format email yang bena',)]
+    #[Rule('required')]
+    #[Rule('min:4')]
     public $profile_email;
 
-    #[Rule('required', message:'harap di isi')]
-    #[Rule('min:10', message:'minimal 10 angka')]
+    #[Rule('required')]
+    #[Rule('integer')]
+    #[Rule('min:10')]
     public $profile_phone_number;
 
-    #[Rule('required', message:'harap di isi')]
+    #[Rule('required')]
     public $profile_address;
 
     public function openModal()

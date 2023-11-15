@@ -33,7 +33,7 @@
 
             <x-slot name="footer">
                 <div class="text-right">
-                    <a href="/listuser/detail{{ $datausers->id }}">
+                    <a href="/listuser/formupdateuser/{{ $datausers->id }}">
                         <button class="p-2 bg-yellow-200 rounded-md btn btn-danger">
                             Edit
                         </button>
