@@ -19,10 +19,6 @@ return new class extends Migration
             $table->integer('product_stock');
             $table->timestamps();
         });
-
-        Schema::table('asset', function (Blueprint $table) {
-            $table->renameColumn('nama_barang', 'product_name');
-        });
     }
 
     /**
