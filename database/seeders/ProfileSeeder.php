@@ -17,10 +17,10 @@ class ProfileSeeder extends Seeder
 
         foreach (range(1, 10) as $index) {
             DB::table('datauser')->insert([
-                'nama_pengguna' => $faker->name,
-                'email' => $faker->unique()->safeEmail,
-                'phone_number' => $faker->phoneNumber,
-                'alamat' => $faker->address,
+                'profile_name' => $faker->name,
+                'profile_email' => $faker->unique()->safeEmail,
+                'profile_phone_number' => $faker->phoneNumber,
+                'profile_address' => $faker->address,
             ]);
         }
     }
