@@ -4,6 +4,7 @@ namespace App\Livewire\Asset;
 
 use Livewire\Component;
 use App\Models\asset;
+use App\Models\HistoriLog;
 use Livewire\Attributes\Rule;
 
 class ModalAsset extends Component
@@ -44,13 +45,19 @@ class ModalAsset extends Component
     {
         $this->validate();
 
-        asset::with('histori_logs')->create([
+        $newAsset = asset::create([
             'product_name' => $this->product_name,
             'product_price' => $this->product_price,
             'product_serial_number' => $this->product_serial_number,
             'product_stock' => $this->product_stock,
             'description' => $this->description
         ]);
+
+        $newAsset->histori_logs()->create([
+            'name' => $this->product_name,
+            'description' => $this->description
+        ]);
+    
 
         $this->resetFields();
         $this->isOpen = false;

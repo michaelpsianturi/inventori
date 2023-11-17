@@ -19,6 +19,6 @@ class HistoriLog extends Model
 
     public function asset()
     {
-        return $this->hasOne(asset::class);
+        return $this->belongsTo(asset::class);
     }
 }
