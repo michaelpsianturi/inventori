@@ -30,7 +30,7 @@
 
                     <li class="px-4 py-6 bg-gray-50 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-3">
                         <h1 class="text-sm font-medium leading-6 text-gray-900">Description</h1>
-                        <p class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{ $assets->description }}</p>
+                        <p class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{ $assets->histori_logs->description }}</p>
                     </li>
                 </ul>
               </div>

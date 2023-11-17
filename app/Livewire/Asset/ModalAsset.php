@@ -26,7 +26,7 @@ class ModalAsset extends Component
     #[Rule('min:1')]
     public $product_stock = '';
 
-    public $description;
+    public $description = '';
 
     public function openModal()
     {
@@ -44,7 +44,7 @@ class ModalAsset extends Component
     {
         $this->validate();
 
-        asset::create([
+        asset::with('histori_logs')->create([
             'product_name' => $this->product_name,
             'product_price' => $this->product_price,
             'product_serial_number' => $this->product_serial_number,
