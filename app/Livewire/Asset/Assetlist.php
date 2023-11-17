@@ -22,7 +22,7 @@ class Assetlist extends Component
     public function render()
     {
         return view('sidebar.asset', [
-            'assets' => asset::paginate(9)
+            'assets' => asset::paginate(9),
         ]);
     }
 }

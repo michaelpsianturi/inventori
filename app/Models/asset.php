@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class asset extends Model
 {
@@ -19,8 +20,8 @@ class asset extends Model
         'description',
     ];
 
-    public function datauser()
+    public function histori_logs()
     {
-        return $this->belongsTo(profile::class);
+        return $this->hasOne(HistoriLog::class);
     }
 }

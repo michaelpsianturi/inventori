@@ -20,7 +20,8 @@ class DetailAsset extends Component
 
     public function mount()
     {
-        $this->assets = asset::find(request()->route('id'));
+        $this->assets = asset::with('histori_logs')->find(request()->route('id'));
+        dd($this->assets);
     }
 
     public function render()
