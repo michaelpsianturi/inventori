@@ -6,7 +6,7 @@
                 <x-navigation />
                 <div class="mx-5 mt-5 ml-24 xl:ml-72 lg:ml-48 md:ml-36 sm:ml-28">
                     <div>
-                        <h1 class="text-2xl">Asset Data</h1>
+                        <h1 class="text-2xl">Histori</h1>
                         @livewire('Asset.ModalAsset')
                     </div>
                     <div class="flow-root mt-8">
