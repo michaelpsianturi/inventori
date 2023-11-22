@@ -47,7 +47,7 @@
             <a href="/histori_logs" class="flex p-2 text-sm font-semibold leading-6 text-gray-700 rounded-md hover:text-teal-600 hover:bg-gray-50 group gap-x-3">
                 <x-accessorieslogo />
                 <h1 class="hidden md:block md:text-ellipsis md:overflow-hidden">
-                    Accessories
+                    Histori
                 </h1>
             </a>
         </li>
