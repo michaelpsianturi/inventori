@@ -30,7 +30,7 @@
 
                     <li class="px-4 py-6 bg-gray-50 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-3">
                         <h1 class="text-sm font-medium leading-6 text-gray-900">Description</h1>
-                        <p class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{ $assets->histori_logs->description }}</p>
+                        <p class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{ $assets->description }}</p>
                     </li>
                 </ul>
               </div>
@@ -38,6 +38,11 @@
 
             <x-slot name="footer">
                 <div class="text-right">
+                    <a href="/asset/formupdateasset/{{ $assets->id }}">
+                        <button class="p-2 bg-teal-200 rounded-md btn btn-danger">
+                            Assigned
+                        </button>
+                    </a>
                     <a href="/asset/formupdateasset/{{ $assets->id }}">
                         <button class="p-2 bg-yellow-200 rounded-md btn btn-danger">
                             Edit
