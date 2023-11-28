@@ -20,14 +20,14 @@ class DetailAsset extends Component
 
     public function mount()
     {
-        $this->assets = asset::with('histori_logs')->find(request()->route('id'));
-        dd($this->assets);
+        $this->assets = asset::with('datauser')->find(request()->route('id'));
+        // dd($this->assets);
     }
 
     public function render()
     {
         return view('livewire.asset.detail-asset', [
-            'assets' => $this->assets,
+            'assets' => $this->assets
         ]);
     }
 }
