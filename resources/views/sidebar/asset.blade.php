@@ -7,9 +7,22 @@
                 <div>
                     <h1 class="text-2xl">Asset Data</h1>
                     @livewire('Asset.ModalAsset')
-                    <div class="flex justify-between w-48 mt-4 ml-4">
-                        <input type="text" placeholder="Cari" wire:model="search" wire:on="search" class="w-full bg-white border-gray-300 rounded-md shadow-sm" />
-                    </div>
+                    <form action="/asset" method="get">
+                        @csrf
+                        <div class="mb-3 row">
+                            <div class="col-sm-3">
+                                <label for="" class="form-label">Name</label>
+                                <input name="name" type="text" class="form-control" placeholder="Name" value="{{isset($_GET['name']) ? $_GET['name'] : ''}}">  
+                            </div>
+                            <div class="col-sm-3">
+                                <label for="" class="form-label">Min Age</label>
+                                <input name="stock" type="number" class="form-control" placeholder="Stock" value="{{isset($_GET['stock']) ? $_GET['stock'] : ''}}">  
+                            </div>
+                            <div class="col-sm-3">
+                                <button type="submit" class="mt-4 btn btn-primary">Search</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
                 <div class="flow-root mt-8">
                      <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
