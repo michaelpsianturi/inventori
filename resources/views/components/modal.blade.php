@@ -8,7 +8,6 @@
                 <div class="grid grid-cols-1 mt-10 gap-x-6 gap-y-8 sm:grid-cols-6">
                     {{ $content }}
                 </div>
-                <!-- Buttons -->
                 <div class="flex mt-8 space-x-2">
                     {{ $footer }}
                 </div>
