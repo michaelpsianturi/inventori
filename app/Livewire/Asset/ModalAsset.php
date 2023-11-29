@@ -32,7 +32,6 @@ class ModalAsset extends Component
     public function openModal()
     {
         $this->isOpen = true;
-        // dd($this->isOpen);
     }
 
     public function closeModal()
