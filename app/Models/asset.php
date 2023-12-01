@@ -17,6 +17,7 @@ class asset extends Model
         'product_serial_number',
         'product_stock',
         'description',
+        'datauser_id'
     ];
 
     public function histori_logs()
