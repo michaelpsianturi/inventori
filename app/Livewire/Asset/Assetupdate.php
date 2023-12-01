@@ -43,7 +43,7 @@ class Assetupdate extends Component
     public function update()
     {
         $this->validate();
-        $asset = Asset::find($this->id);
+        $asset = asset::find($this->id);
         $asset->update([
             'product_name' => $this->product_name,
             'product_price' => $this->product_price,
