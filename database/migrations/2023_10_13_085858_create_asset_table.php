@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('asset', function (Blueprint $table) {
-            $table->integer('datauser_id');
+            $table->dropColumn('datauser_id');
         });
     }
 
