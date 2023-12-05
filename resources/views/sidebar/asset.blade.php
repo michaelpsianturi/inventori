@@ -3,29 +3,13 @@
         <x-sidebar />
         <div class="w-full">
             <x-navigation />
-            <div class="mx-5 mt-5 ml-24 xl:ml-72 lg:ml-48 md:ml-36 sm:ml-28">
+            <div class="mt-5 ml-24 xl:ml-72 lg:ml-48 md:ml-36 sm:ml-28">
                 <div>
                     <h1 class="text-2xl">Asset Data</h1>
                     @livewire('Asset.ModalAsset')
-                    <form action="/asset" method="get">
-                        @csrf
-                        <div class="mb-3 row">
-                            <div class="col-sm-3">
-                                <label for="" class="form-label">Name</label>
-                                <input name="name" type="text" class="form-control" placeholder="Name" value="{{isset($_GET['name']) ? $_GET['name'] : ''}}">  
-                            </div>
-                            <div class="col-sm-3">
-                                <label for="" class="form-label">Min Age</label>
-                                <input name="stock" type="number" class="form-control" placeholder="Stock" value="{{isset($_GET['stock']) ? $_GET['stock'] : ''}}">  
-                            </div>
-                            <div class="col-sm-3">
-                                <button type="submit" class="mt-4 btn btn-primary">Search</button>
-                            </div>
-                        </div>
-                    </form>
                 </div>
                 <div class="flow-root mt-8">
-                     <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                     <div class="overflow-x-auto">
                         <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
                             <div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 sm:rounded-lg">
                                 <table class="min-w-full divide-y divide-gray-300">

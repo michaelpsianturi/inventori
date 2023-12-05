@@ -10,14 +10,6 @@ class Assetlist extends Component
 {
     use WithPagination;
 
-    public $search;
-
-    public function search()
-    {
-        $assets = Asset::where('name', 'like', "%{$this->search}%")->orWhere('category', 'like', "%{$this->search}%")->paginate(9);
-        $this->emit('refreshAssets', $assets);
-    }
-
     public function delete($id)
     {
         $asset = asset::where('id', $id)->first();
