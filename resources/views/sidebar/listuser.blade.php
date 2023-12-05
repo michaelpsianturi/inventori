@@ -7,12 +7,9 @@
                 <div>
                     <h1 class="text-2xl">List User</h1>
                     @livewire('User.Modaluser')
-                    <div class="flex justify-between w-48 mt-4 ml-4">
-                        <input type="text" placeholder="Cari" wire:model="search" wire:on="search" class="w-full bg-white border-gray-300 rounded-md shadow-sm" />
-                    </div>
                 </div>
                 <div class="flow-root mt-8">
-                    <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                    <div class="overflow-x-auto">
                        <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
                            <div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 sm:rounded-lg">
                                <table class="min-w-full divide-y divide-gray-300">
