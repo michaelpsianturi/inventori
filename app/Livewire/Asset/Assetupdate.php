@@ -4,11 +4,13 @@ namespace App\Livewire\Asset;
 
 use Livewire\Component;
 use App\Models\asset;
+use App\Models\datauser;
 use Livewire\Attributes\Rule;
 
 class Assetupdate extends Component
 {
     public $id;
+    public $selectedDatauserId;
 
     #[Rule('required')]
     #[Rule('min:2')]
@@ -27,16 +29,19 @@ class Assetupdate extends Component
     public $product_stock;
 
     public $description;
+    public $datausers;
 
     public function mount()
     {
         $this->id = request()->route('id');
+        $this->datausers = datauser::all();
         $assets = asset::find($this->id);
         $this->product_name = $assets->product_name;
         $this->product_price = $assets->product_price;
         $this->product_serial_number = $assets->product_serial_number;
         $this->product_stock = $assets->product_stock;
         $this->description = $assets->description;
+        $this->selectedDatauserId = $assets->datauser_id;
     }
 
 
@@ -49,7 +54,8 @@ class Assetupdate extends Component
             'product_price' => $this->product_price,
             'product_serial_number' => $this->product_serial_number,
             'product_stock' => $this->product_stock,
-            'description' => $this->description
+            'description' => $this->description,
+            'datauser_id' => $this->selectedDatauserId,
         ]);
 
         return redirect()->to('/asset');
