@@ -42,6 +42,15 @@
                     <h2 class="mt-4 mb-2 text-xl">Description</h2>
                     <input wire:model="description" class="block w-2/3 p-2 text-gray-900 border-0 rounded-md shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" type="text">
                 </div>
+
+                <div>
+                    <h2 class="mt-4 mb-2 text-xl">User</h2>
+                    <select wire:model="selectedDatauserId">
+                        @foreach ($datausers as $datauser)
+                            <option value="{{ $datauser->id }}">{{ $datauser->profile_name }}</option>
+                        @endforeach
+                    </select>
+                </div>
             </x-slot>
 
             <x-slot name="footer">
