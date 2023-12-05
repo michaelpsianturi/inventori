@@ -20,7 +20,7 @@ class datauser extends Model
 
     public function assets()
     {
-        return $this->hasOne(asset::class);
+        return $this->hasMany(asset::class);
     }
 
     public function Accessories()
