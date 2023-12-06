@@ -9,19 +9,7 @@ use App\Models\datauser;
 class DetailAsset extends Component
 {
     public $assets;
-    public $isOpen = false;
     public $datausers;
-
-    public function openModal()
-    {
-        $this->isOpen = true;
-    }
-
-    public function closeModal()
-    {
-        $this->isOpen = false;
-        return redirect()->to('/asset');
-    }
 
     public function delete($id)
     {
