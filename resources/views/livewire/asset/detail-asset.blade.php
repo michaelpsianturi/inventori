@@ -47,38 +47,6 @@
 
             <x-slot name="footer">
                 <div class="text-right" class="grid grid-cols-3">
-                    <div>
-                        <button wire:click="openModal" class="p-2 bg-teal-200 rounded-md btn btn-danger">Assigned</button>
-
-                        @if ($isOpen)
-                            <x-modal>
-                                <x-slot name="title">
-                                    <div class="flex justify-between">
-                                        Assigned To
-                                        <a href="">
-                                            <svg xmlns="http://www.w3.org/2000/svg" wire:click="closeModal" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                            </svg>
-                                        </a>
-
-                                    </div>
-                                </x-slot>
-                                
-                                <x-slot name="content">
-                                    <label for="assigned_to">
-                                        Ditetapkan ke
-                                    </label>
-                                    <select class="w-48 form-control" id="assigned_to" name="assigned_to">
-                                        @foreach ($datausers as $datauser)
-                                            <option value="{{ $datauser->id }}">{{ $datauser->profile_name }}</option>
-                                        @endforeach
-                                    </select>
-                                </x-slot>
-                                <x-slot name="footer">asdf</x-slot>
-                            </x-modal>
-                        @endif
-                    </div>
-
                     <a href="/asset/formupdateasset/{{ $assets->id }}">
                         <button class="p-2 bg-yellow-200 rounded-md btn btn-danger">
                             Edit
