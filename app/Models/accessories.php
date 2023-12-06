@@ -16,10 +16,11 @@ class accessories extends Model
         'accessories_price',
         'accessories_serial_number',
         'accessories_stock',
+        'datauser_id'
     ];
 
-    public function datausers()
+    public function datauser()
     {
-        return $this->belongsTo(profile::class);
+        return $this->belongsTo(datauser::class);
     }
 }
