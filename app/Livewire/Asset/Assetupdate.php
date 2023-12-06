@@ -11,6 +11,8 @@ class Assetupdate extends Component
 {
     public $id;
     public $selectedDatauserId;
+    public $datausers;
+    public $description;
 
     #[Rule('required')]
     #[Rule('min:2')]
@@ -28,9 +30,6 @@ class Assetupdate extends Component
     #[Rule('min:1')]
     public $product_stock;
 
-    public $description;
-    public $datausers;
-
     public function mount()
     {
         $this->id = request()->route('id');
@@ -44,7 +43,6 @@ class Assetupdate extends Component
         $this->selectedDatauserId = $assets->datauser_id;
     }
 
-
     public function update()
     {
         $this->validate();
@@ -55,7 +53,7 @@ class Assetupdate extends Component
             'product_serial_number' => $this->product_serial_number,
             'product_stock' => $this->product_stock,
             'description' => $this->description,
-            'datauser_id' => $this->selectedDatauserId,
+            'datauser_id' => $this->selectedDatauserId
         ]);
 
         return redirect()->to('/asset');
