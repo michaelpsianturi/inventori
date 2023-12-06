@@ -2,12 +2,14 @@
 
 namespace App\Livewire\Accessories;
 use App\Models\accessories;
+use App\Models\datauser;
 
 use Livewire\Component;
 
 class DetailAccessories extends Component
 {
     public $Accessories;
+    public $datausers;
 
     public function delete($id)
     {
@@ -20,8 +22,11 @@ class DetailAccessories extends Component
 
     public function mount()
     {
-        $this->Accessories = accessories::find(request()->route('id'));
+        $this->Accessories = accessories::with('datauser')->find(request()->route('id'));
+
+        $this->datausers = datauser::all();
     }
+
     public function render()
     {
         return view('livewire.accessories.detail-accessories', [
