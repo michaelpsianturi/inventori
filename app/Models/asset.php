@@ -20,11 +20,6 @@ class asset extends Model
         'datauser_id'
     ];
 
-    public function histori_logs()
-    {
-        return $this->hasOne(HistoriLog::class);
-    }
-
     public function datauser()
     {
         return $this->belongsTo(datauser::class);
