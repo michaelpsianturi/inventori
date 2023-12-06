@@ -37,6 +37,15 @@
                         @error('accessories_stock') <span class="text-red-500 eror">{{ $message }}</span> @enderror
                     </div>
                 </div>
+
+                <div>
+                    <h2 class="mt-4 mb-2 text-xl">User</h2>
+                    <select wire:model="selectedDatauserId">
+                        @foreach ($datausers as $datauser)
+                            <option value="{{ $datauser->id }}">{{ $datauser->profile_name }}</option>
+                        @endforeach
+                    </select>
+                </div>
             </x-slot>
 
             <x-slot name="footer">
