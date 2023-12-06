@@ -9,6 +9,15 @@
               <div>
                 <ul>
                     <li class="px-4 py-6 bg-gray-50 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-3">
+                        <h1 class="text-sm font-medium leading-6 text-gray-900">User</h1>
+                        @isset($Accessories->datauser->profile_name)
+                            <p class="text-sm text-slate-700"> {{ $Accessories->datauser->profile_name }}</p>
+                        @else
+                            <p class="text-sm text-slate-700">not owned yet</p>
+                        @endisset
+                    </li>
+                    
+                    <li class="px-4 py-6 bg-gray-50 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-3">
                         <h1 class="text-sm font-medium leading-6 text-gray-900">Item Name</h1>
                         <p class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{ $Accessories->accessories_name }}</p>
                     </li>
@@ -33,7 +42,7 @@
 
             <x-slot name="footer">
                 <div class="text-right">
-                    <a href="/listuser/detail{{ $Accessories->id }}">
+                    <a href="/accessories/formupdateaccessories/{{ $Accessories->id }}">
                         <button class="p-2 bg-yellow-200 rounded-md btn btn-danger">
                             Edit
                         </button>
