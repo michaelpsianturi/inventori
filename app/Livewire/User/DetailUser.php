@@ -21,7 +21,6 @@ class DetailUser extends Component
     public function mount()
     {
         $this->datausers = datauser::find(request()->route('id'));
-        dd($this->datausers);
     }
 
     public function render()
