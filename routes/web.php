@@ -18,10 +18,8 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
-    Route::get('/', function () {
-        return view('dashboard');
-    })->name('bot');
-    Route::get('/dashboard', Dashboard::class)->name('dashboard');
+    Route::get('/', Dashboard::class)->name('dashboard');
+
     Route::get('/asset', Assetlist::class);
     Route::get('/asset/formupdateasset/{id}', Assetupdate::class);
     Route::get('/asset/details/{id}', DetailAsset::class);
