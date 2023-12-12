@@ -4,7 +4,9 @@
         <div class="w-full">
             <x-navigation />
             <div class="mx-5 mt-5 ml-24 xl:ml-72 lg:ml-48 md:ml-36 sm:ml-28">
-                <h1 class="lg:text-2xl md:text-xl sm:text-lg">DASHBOARD</h1>
+                <h1 class="lg:text-2xl md:text-xl sm:text-lg">
+                    {{ __('Dashboard') }}
+                </h1>
                 <div class="mt-4 text-slate-700">
                     <ul class="grid grid-cols-1 gap-4 sm:grid-cols-3">
                         <li class="p-2 ">
