@@ -13,12 +13,9 @@ return new class extends Migration
     {
         Schema::create('histori_logs', function (Blueprint $table) {
             $table->id();
-            $table->integer('group_id');
-            if (Schema::hasTable('assets')) {
-                $table->foreign('group_id')->references('id')->on('assets');
-            } elseif (Schema::hasTable('datauser')) {
-                $table->foreign('group_id')->references('id')->on('users');
-            }
+            $table->bigInteger('group_id');
+            $table->foreign('group_id')->references('id')->on('asset')->onDelete('casade');
+            $table->foreign('group_id')->references('id')->on('datauser')->onDelete('casade');
             $table->string('name');
             $table->timestamps();
         });
