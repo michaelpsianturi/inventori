@@ -14,10 +14,10 @@
                                 <h1 class="py-4 text-base bg-teal-100 border-b-2 md:text-lg sm:text-sm rounded-t-xl">TOTAL ASSET</h1>
                                 <h2 class="py-6 text-base bg-white sm:text-base">{{ $assets }}</h2>
                                 <div class="p-2 bg-slate-50">
-                                    <h3 class="flex text-left md:text-base sm:text-sm">
-                                        ASSET
-                                        <a href="/asset" class="ml-2">
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <h3 class="text-left md:text-base sm:text-sm">
+                                        <a class="flex" href="/asset">
+                                            ASSET
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 ml-2">
                                                 <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
                                             </svg>
                                         </a>
