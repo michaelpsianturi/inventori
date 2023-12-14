@@ -36,6 +36,11 @@
                         <h1 class="text-sm font-medium leading-6 text-gray-900">Stock</h1>
                         <p class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{ $Accessories->accessories_stock }}</p>
                     </li>
+
+                    <li class="px-4 py-6 bg-white sm:grid sm:grid-cols-3 sm:gap-4 sm:px-3">
+                        <h1 class="text-sm font-medium leading-6 text-gray-900">Last Edited</h1>
+                        <p class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{ $Accessories->updated_at }}</p>
+                    </li>
                 </ul>
               </div>
             </x-slot> 
