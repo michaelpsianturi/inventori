@@ -10,7 +10,7 @@ use App\Livewire\User\Detailuser;
 use App\Livewire\Accessories\Accessorieslist;
 use App\Livewire\Accessories\Accessoriesupdate;
 use App\Livewire\Accessories\DetailAccessories;
-use App\Livewire\DataLogs;
+use App\Livewire\Histori\ActivityLog;
 use App\Livewire\Dashboard;
 
 Route::middleware([
@@ -29,5 +29,5 @@ Route::middleware([
     Route::get('/accessories', Accessorieslist::class);
     Route::get('/accessories/formupdateaccessories/{id}', Accessoriesupdate::class);
     Route::get('/accessories/detail/{id}', DetailAccessories::class);
-    Route::get('/histori_logs', DataLogs::class);
+    Route::get('/histori_logs', ActivityLog::class);
 });
