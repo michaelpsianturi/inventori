@@ -65,6 +65,4 @@
             </div>
         </div>
     </x-layouts.app>
-    
-    
 </div>
