@@ -24,4 +24,9 @@ class asset extends Model
     {
         return $this->belongsTo(datauser::class);
     }
+
+    public function HistoriLogs()
+    {
+        return $this->belongsTo(HistoriLog::class);
+    }
 }
