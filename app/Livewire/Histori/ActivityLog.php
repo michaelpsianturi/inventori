@@ -4,7 +4,7 @@ namespace App\Livewire\Histori;
 
 use Livewire\Component;
 use Livewire\WithPagination;
-use app\Models\HistoriLog;
+use App\Models\HistoriLog;
 
 class ActivityLog extends Component
 {
