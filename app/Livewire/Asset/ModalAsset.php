@@ -28,6 +28,7 @@ class ModalAsset extends Component
     public $product_stock = '';
 
     public $description = '';
+    public $datauser_id = '';
 
     public function openModal()
     {
@@ -49,14 +50,13 @@ class ModalAsset extends Component
             'product_price' => $this->product_price,
             'product_serial_number' => $this->product_serial_number,
             'product_stock' => $this->product_stock,
-            'description' => $this->description
+            'description' => $this->description,
+            'datauser_id' => $this->datauser_id
         ]);
 
-        $newAsset->histori_logs()->create([
+        $newAsset->historilogs()->create([
             'name' => $this->product_name,
-            'description' => $this->description
         ]);
-    
 
         $this->resetFields();
         $this->isOpen = false;

@@ -9,10 +9,11 @@ class HistoriLog extends Model
 {
     use HasFactory;
 
-    protected $table = 'histori_logs';
+    protected $table = 'historilogs';
 
     protected $fillable = [
-        'group_id',
+        'asset_id',
+        'datauser_id',
         'name',
     ];
 

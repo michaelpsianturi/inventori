@@ -11,11 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('histori_logs', function (Blueprint $table) {
+        Schema::create('historilogs', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('group_id');
-            $table->foreign('group_id')->references('id')->on('asset')->onDelete('casade');
-            $table->foreign('group_id')->references('id')->on('datauser')->onDelete('casade');
+            $table->unsignedBigInteger('asset_id')->nullable();
+            $table->unsignedBigInteger('datauser_id')->nullable();
+            $table->foreign('asset_id')->references('id')->on('asset')->onDelete('cascade');
+            $table->foreign('datauser_id')->references('id')->on('datauser')->onDelete('cascade');
             $table->string('name');
             $table->timestamps();
         });
