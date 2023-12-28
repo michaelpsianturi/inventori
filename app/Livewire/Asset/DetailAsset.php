@@ -21,9 +21,10 @@ class DetailAsset extends Component
     }
 
     public function mount()
-    {
+    {   
         $this->assets = asset::with('datauser')->find(request()->route('id'));
         $this->datausers = datauser::all();
+        // dd($this->assets);
     }
 
     public function render()

@@ -25,7 +25,8 @@ class AssetSeeder extends Seeder
                 'product_price' => rand(10000, 100000),
                 'product_serial_number' => $faker->numberBetween(1000, 9999),
                 'product_stock' => rand(0, 100),
-                'description' => $faker->text(100)
+                'description' => $faker->text(100),
+                'datauser_id' => $faker->numberBetween(0, 99)
             ]);
         }
     }

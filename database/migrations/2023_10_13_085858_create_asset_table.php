@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('asset', function (Blueprint $table) {
-            $table->renameColumn('user_id', 'datauser_id');
+            $table->integer('datauser_id')->nullable();
         });
     }
 
@@ -22,7 +22,7 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('asset', function (Blueprint $table) {
-            $table->renameColumn('user_id', 'datauser_id');
+            $table->dropColumn('datauser_id');
         });
     }
 };
