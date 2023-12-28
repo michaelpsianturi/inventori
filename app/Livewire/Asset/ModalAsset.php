@@ -51,7 +51,7 @@ class ModalAsset extends Component
             'product_serial_number' => $this->product_serial_number,
             'product_stock' => $this->product_stock,
             'description' => $this->description,
-            'datauser_id' => $this->datauser_id
+            // 'datauser_id' => $this->datauser_id
         ]);
 
         $newAsset->historilogs()->create([
