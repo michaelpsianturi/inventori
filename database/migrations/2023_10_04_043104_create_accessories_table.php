@@ -11,8 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('accessories', function (Blueprint $table) {
-            $table->integer('datauser_id');
+        Schema::create('accessories', function (Blueprint $table) {
+            $table->id();
+            $table->string('accessories_name');
+            $table->decimal('accessories_price', 10, 2);
+            $table->string('accessories_serial_number')->unique();
+            $table->text('accessories_stock');
+            $table->timestamps();
         });
     }
 
@@ -21,8 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('accessories', function (Blueprint $table) {
-            $table->dropColumn('datauser_id');
-        });
+        Schema::dropIfExists('accessories');
     }
 };
