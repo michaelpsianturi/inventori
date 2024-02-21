@@ -25,10 +25,10 @@
                                     <tbody class="bg-white divide-y divide-gray-200">
                                         @foreach ($assets as $asset)
                                             <tr>
-                                                <td class="py-4 pl-4 pr-3 text-sm font-medium text-gray-900 whitespace-nowrap sm:pl-6">{{ $asset->product_name }}</td>
-                                                <td class="px-3 py-4 text-sm text-gray-500 whitespace-nowrap">{{ $asset->product_price }}</td>
-                                                <td class="px-3 py-4 text-sm text-gray-500 whitespace-nowrap">{{ $asset->product_serial_number }}</td>
-                                                <td class="px-3 py-4 text-sm text-gray-500 whitespace-nowrap">{{ $asset->product_stock }}</td>
+                                                <td class="py-4 pl-4 pr-3 text-sm font-medium text-gray-900 whitespace-nowrap sm:pl-6">{{ $asset->products_name }}</td>
+                                                <td class="px-3 py-4 text-sm text-gray-500 whitespace-nowrap">{{ $asset->products_price }}</td>
+                                                <td class="px-3 py-4 text-sm text-gray-500 whitespace-nowrap">{{ $asset->products_serial_number }}</td>
+                                                <td class="px-3 py-4 text-sm text-gray-500 whitespace-nowrap">{{ $asset->products_stock }}</td>
                                                 <td class="relative py-4 pl-3 pr-4 text-sm font-medium text-right whitespace-nowrap sm:pr-6">
                                                     <a href="/asset/details/{{ $asset->id }}">
                                                         <button class="p-2 bg-teal-200 rounded-md btn btn-danger">
