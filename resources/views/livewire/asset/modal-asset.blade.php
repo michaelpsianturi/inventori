@@ -18,31 +18,31 @@
                 <div class="sm:col-span-4">
                     <h2 for="nama-asset" class="block text-sm font-medium leading-6 text-gray-900">Nama Asset *</h2>
                     <div class="mt-2">
-                        <input wire:model="product_name" type="text" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 pl-2">
+                        <input wire:model="products_name" type="text" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 pl-2">
                         @error('product_name') <span class="text-red-500 eror">{{ $message }}</span> @enderror
                     </div>
                 </div>
 
                 <div class="sm:col-span-4">
-                    <h2 for="product_price" class="block text-sm font-medium leading-6 text-gray-900">Harga *</h2>
+                    <h2 for="products_price" class="block text-sm font-medium leading-6 text-gray-900">Harga *</h2>
                     <div class="mt-2">
-                        <input wire:model="product_price" id="product_price" name="product_price" type="text" autocomplete="product_price" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 pl-2">
+                        <input wire:model="products_price" id="products_price" name="products_price" type="text" autocomplete="products_price" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 pl-2">
                         @error('product_price') <span class="text-red-500 eror">{{ $message }}</span> @enderror
                     </div>
                 </div>
 
                 <div class="sm:col-span-4">
-                    <h2 for="product_serial_number" class="block text-sm font-medium leading-6 text-gray-900">Nomor Seri Barang *</h2>
+                    <h2 for="products_serial_number" class="block text-sm font-medium leading-6 text-gray-900">Nomor Seri Barang *</h2>
                     <div class="mt-2">
-                        <input wire:model="product_serial_number" id="product_serial_number" name="product_serial_number" type="text" autocomplete="product_serial_number" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 pl-2">
+                        <input wire:model="products_serial_number" id="products_serial_number" name="products_serial_number" type="text" autocomplete="products_serial_number" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 pl-2">
                         @error('product_serial_number') <span class="text-red-500 eror">{{ $message }}</span> @enderror
                     </div>
                 </div>
 
                 <div class="col-span-4">
-                    <h2 for="product_stock" class="block text-sm font-medium leading-6 text-gray-900">Total Barang *</h2>
+                    <h2 for="products_stock" class="block text-sm font-medium leading-6 text-gray-900">Total Barang *</h2>
                     <div class="mt-2">
-                        <input wire:model="product_stock" type="text" name="product_stock" id="product_stock" autocomplete="product_stock" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 pl-2">
+                        <input wire:model="products_stock" type="text" name="products_stock" id="products_stock" autocomplete="products_stock" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 pl-2">
                         @error('product_stock') <span class="text-red-500 eror">{{ $message }}</span> @enderror
                     </div>
                 </div>
