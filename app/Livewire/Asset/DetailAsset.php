@@ -24,7 +24,7 @@ class DetailAsset extends Component
     {   
         $this->assets = asset::with('datauser')->find(request()->route('id'));
         $this->datausers = datauser::all();
-        // dd($this->assets);
+        dd($this->assets);
     }
 
     public function render()
