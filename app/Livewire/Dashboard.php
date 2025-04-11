@@ -2,10 +2,10 @@
 
 namespace App\Livewire;
 
-use Livewire\Component;
+use App\Models\accessories;
 use App\Models\asset;
 use App\Models\datauser;
-use App\Models\accessories;
+use Livewire\Component;
 
 class Dashboard extends Component
 {
@@ -18,7 +18,7 @@ class Dashboard extends Component
         return view('livewire.dashboard', [
             'assets' => $assets,
             'datausers' => $datausers,
-            'Accessories' => $Acceessories
+            'Accessories' => $Acceessories,
         ]);
     }
 }

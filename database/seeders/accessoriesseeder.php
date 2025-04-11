@@ -27,10 +27,10 @@ class accessoriesseeder extends Seeder
 
         for ($i = 0; $i < 15; $i++) {
             accessories::create([
-                'nama_barang' => $faker-> randomElement($accessoriesitem),
-                'harga_barang' => rand(19999,199999 ),
-                'nomor_seri_barang' => $faker-> numberBetween(1000, 9999),
-                'jumlah_barang' => rand(0,20)
+                'nama_barang' => $faker->randomElement($accessoriesitem),
+                'harga_barang' => rand(19999, 199999),
+                'nomor_seri_barang' => $faker->numberBetween(1000, 9999),
+                'jumlah_barang' => rand(0, 20),
             ]);
         }
     }

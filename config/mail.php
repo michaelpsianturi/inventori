@@ -33,7 +33,6 @@ return [
     |
     */
 
-
     'mailers' => [
         'smtp' => [
             'transport' => 'smtp',
@@ -46,8 +45,6 @@ return [
             'timeout' => null,
             'local_domain' => env('MAIL_EHLO_DOMAIN'),
         ],
-
-   
 
         'ses' => [
             'transport' => 'ses',
@@ -104,8 +101,7 @@ return [
     'from' => [
         'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
         'name' => env('MAIL_FROM_NAME', 'Example'),
-        ],
-
+    ],
 
     /*
     |--------------------------------------------------------------------------

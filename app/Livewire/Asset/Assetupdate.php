@@ -2,16 +2,19 @@
 
 namespace App\Livewire\Asset;
 
-use Livewire\Component;
 use App\Models\asset;
 use App\Models\datauser;
 use Livewire\Attributes\Rule;
+use Livewire\Component;
 
 class Assetupdate extends Component
 {
     public $id;
+
     public $selectedDatauserId;
+
     public $datausers;
+
     public $description;
 
     #[Rule('required')]
@@ -53,7 +56,7 @@ class Assetupdate extends Component
             'product_serial_number' => $this->product_serial_number,
             'product_stock' => $this->product_stock,
             'description' => $this->description,
-            'datauser_id' => $this->selectedDatauserId
+            'datauser_id' => $this->selectedDatauserId,
         ]);
 
         return redirect()->to('/asset');

@@ -17,7 +17,7 @@ class Asset extends Model
         'product_serial_number',
         'product_stock',
         'description',
-        'datauser_id'
+        'datauser_id',
     ];
 
     public function datauser()

@@ -16,7 +16,7 @@ class Accessories extends Model
         'accessories_price',
         'accessories_serial_number',
         'accessories_stock',
-        'datauser_id'
+        'datauser_id',
     ];
 
     public function datauser()

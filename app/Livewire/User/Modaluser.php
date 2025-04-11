@@ -2,15 +2,16 @@
 
 namespace App\Livewire\User;
 
-use Livewire\Component;
-use Livewire\Attributes\Rule;
 use App\Models\datauser;
+use Livewire\Attributes\Rule;
+use Livewire\Component;
+
 class Modaluser extends Component
 {
     public $isOpen = false;
 
     #[Rule('required')]
-    #[Rule('min:2',)]
+    #[Rule('min:2', )]
     public $profile_name;
 
     #[Rule('required')]
@@ -55,6 +56,7 @@ class Modaluser extends Component
 
         $this->resetFields();
         $this->isOpen = false;
+
         return redirect()->to('/listuser');
     }
 

@@ -4,8 +4,6 @@ namespace App\Livewire\Asset;
 
 use Livewire\Component;
 
-use App\Models\asset;
-
 class SearchAsset extends Component
 {
     public function render()

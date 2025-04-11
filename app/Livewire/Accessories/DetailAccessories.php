@@ -1,14 +1,15 @@
 <?php
 
 namespace App\Livewire\Accessories;
+
 use App\Models\accessories;
 use App\Models\datauser;
-
 use Livewire\Component;
 
 class DetailAccessories extends Component
 {
     public $Accessories;
+
     public $datausers;
 
     public function delete($id)
@@ -16,6 +17,7 @@ class DetailAccessories extends Component
         $Accessories = accessories::where('id', $id)->first();
         if ($Accessories) {
             $Accessories->delete($id);
+
             return redirect()->to('/accessories');
         }
     }
@@ -30,7 +32,7 @@ class DetailAccessories extends Component
     public function render()
     {
         return view('livewire.accessories.detail-accessories', [
-            'Accessories' => $this->Accessories
+            'Accessories' => $this->Accessories,
         ]);
     }
 }
