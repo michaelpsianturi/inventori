@@ -10,8 +10,6 @@ class Accessoriesupdate extends Component
 {
     public $id;
 
-
-
     #[Rule('required')]
     #[Rule('min:2')]
     public $accessories_name;

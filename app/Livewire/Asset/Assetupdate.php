@@ -10,7 +10,6 @@ class Assetupdate extends Component
 {
     public $id;
 
-
     public $description;
 
     #[Rule('required')]

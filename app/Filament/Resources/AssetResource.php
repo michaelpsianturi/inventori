@@ -3,9 +3,7 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\AssetResource\Pages;
-use App\Filament\Resources\AssetResource\RelationManagers;
 use App\Models\Asset;
-use Filament\Forms;
 use Filament\Forms\Components\MarkdownEditor;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\TextInput;
@@ -17,8 +15,6 @@ use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class AssetResource extends Resource
 {
@@ -52,7 +48,7 @@ class AssetResource extends Resource
                             ->required()
                             ->maxLength(65535)
                             ->columnSpanFull(),
-                    ])->columns(2)
+                    ])->columns(2),
             ]);
     }
 
@@ -102,8 +98,8 @@ class AssetResource extends Resource
                         TextEntry::make('description')
                             ->label('Description')
                             ->html()
-                            ->columnSpanFull()
-                    ])->columns(2)
+                            ->columnSpanFull(),
+                    ])->columns(2),
             ]);
     }
 
