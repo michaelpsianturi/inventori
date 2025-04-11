@@ -13,14 +13,8 @@ class HistoriLog extends Model
 
     protected $fillable = [
         'asset_id',
-        'datauser_id',
         'name',
     ];
-
-    public function users()
-    {
-        return $this->belongsToMany(datauser::class, 'users');
-    }
 
     public function assets()
     {

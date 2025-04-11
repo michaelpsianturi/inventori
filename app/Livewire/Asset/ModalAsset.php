@@ -28,8 +28,6 @@ class ModalAsset extends Component
 
     public $description = '';
 
-    public $datauser_id = '';
-
     public function openModal()
     {
         $this->isOpen = true;

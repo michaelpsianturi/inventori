@@ -16,11 +16,5 @@ class Accessories extends Model
         'accessories_price',
         'accessories_serial_number',
         'accessories_stock',
-        'datauser_id',
     ];
-
-    public function datauser()
-    {
-        return $this->belongsTo(datauser::class);
-    }
 }
