@@ -2,10 +2,9 @@
 
 namespace App\Livewire\Asset;
 
-use Livewire\Component;
 use App\Models\asset;
-use App\Models\HistoriLog;
 use Livewire\Attributes\Rule;
+use Livewire\Component;
 
 class ModalAsset extends Component
 {
@@ -28,7 +27,6 @@ class ModalAsset extends Component
     public $product_stock = '';
 
     public $description = '';
-    public $datauser_id = '';
 
     public function openModal()
     {
@@ -38,6 +36,7 @@ class ModalAsset extends Component
     public function closeModal()
     {
         $this->isOpen = false;
+
         return redirect()->to('/asset');
     }
 
@@ -59,10 +58,10 @@ class ModalAsset extends Component
 
         $this->resetFields();
         $this->isOpen = false;
+
         return redirect()->to('/asset');
         dd($this->saveAsset);
     }
-
 
     private function resetFields()
     {

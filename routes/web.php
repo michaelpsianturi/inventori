@@ -1,17 +1,17 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Livewire\Asset\Assetlist;
-use App\Livewire\Asset\Assetupdate;
-use App\Livewire\Asset\DetailAsset;
-use App\Livewire\User\Userlist;
-use App\Livewire\User\Userupdate;
-use App\Livewire\User\Detailuser;
 use App\Livewire\Accessories\Accessorieslist;
 use App\Livewire\Accessories\Accessoriesupdate;
 use App\Livewire\Accessories\DetailAccessories;
-use App\Livewire\Histori\ActivityLog;
+use App\Livewire\Asset\Assetlist;
+use App\Livewire\Asset\Assetupdate;
+use App\Livewire\Asset\DetailAsset;
 use App\Livewire\Dashboard;
+use App\Livewire\Histori\ActivityLog;
+use App\Livewire\User\Detailuser;
+use App\Livewire\User\Userlist;
+use App\Livewire\User\Userupdate;
+use Illuminate\Support\Facades\Route;
 
 Route::middleware([
     'auth:sanctum',

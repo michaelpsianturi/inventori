@@ -2,16 +2,13 @@
 
 namespace App\Livewire\Accessories;
 
-use Livewire\Component;
-use App\Models\accessories;
-use App\Models\datauser;
+use App\Models\Accessories;
 use Livewire\Attributes\Rule;
+use Livewire\Component;
 
 class Accessoriesupdate extends Component
 {
     public $id;
-    public $selectedDatauserId;
-    public $datausers;
 
     #[Rule('required')]
     #[Rule('min:2')]
@@ -31,13 +28,11 @@ class Accessoriesupdate extends Component
     public function mount()
     {
         $this->id = request()->route('id');
-        $this->datausers = datauser::all();
         $Accessories = accessories::find($this->id);
         $this->accessories_name = $Accessories->accessories_name;
         $this->accessories_price = $Accessories->accessories_price;
         $this->accessories_serial_number = $Accessories->accessories_serial_number;
         $this->accessories_stock = $Accessories->accessories_stock;
-        $this->selectedDatauserId = $Accessories->datauser_id;
     }
 
     public function update()
@@ -49,7 +44,6 @@ class Accessoriesupdate extends Component
             'accessories_price' => $this->accessories_price,
             'accessories_serial_number' => $this->accessories_serial_number,
             'accessories_stock' => $this->accessories_stock,
-            'datauser_id' => $this->selectedDatauserId
         ]);
 
         return redirect()->to('/accessories');

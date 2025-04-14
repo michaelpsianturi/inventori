@@ -2,9 +2,9 @@
 
 namespace App\Livewire\Accessories;
 
-use Livewire\Component;
-use Livewire\Attributes\Rule;
 use App\Models\accessories;
+use Livewire\Attributes\Rule;
+use Livewire\Component;
 
 class AddAccessories extends Component
 {
@@ -24,7 +24,6 @@ class AddAccessories extends Component
     #[Rule('required')]
     #[Rule('integer')]
     public $accessories_stock;
-
 
     public function openModal()
     {
@@ -51,11 +50,12 @@ class AddAccessories extends Component
             'accessories_name' => $this->accessories_name,
             'accessories_price' => $this->accessories_price,
             'accessories_serial_number' => $this->accessories_serial_number,
-            'accessories_stock' => $this->accessories_stock
+            'accessories_stock' => $this->accessories_stock,
         ]);
 
         $this->resetFields();
         $this->isOpen = false;
+
         return redirect()->to('/accessories');
     }
 

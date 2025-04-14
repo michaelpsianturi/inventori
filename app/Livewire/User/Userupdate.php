@@ -2,17 +2,18 @@
 
 namespace App\Livewire\User;
 
+use App\Models\datauser;
 use Livewire\Attributes\Rule;
 use Livewire\Component;
-use App\Models\datauser;
 
 class Userupdate extends Component
 {
     public datauser $datausers;
+
     public $id;
 
     #[Rule('required')]
-    #[Rule('min:2',)]
+    #[Rule('min:2', )]
     public $profile_name;
 
     #[Rule('required')]
@@ -26,15 +27,15 @@ class Userupdate extends Component
 
     #[Rule('required')]
     public $profile_address;
-    
+
     public function mount()
     {
         $this->id = request()->route('id');
         $profile = datauser::find($this->id);
-        $this->profile_name  = $profile->profile_name;
-        $this->profile_email  = $profile->profile_email;
-        $this->profile_phone_number  = $profile->profile_phone_number;
-        $this->profile_address  = $profile->profile_address;
+        $this->profile_name = $profile->profile_name;
+        $this->profile_email = $profile->profile_email;
+        $this->profile_phone_number = $profile->profile_phone_number;
+        $this->profile_address = $profile->profile_address;
     }
 
     public function update()
@@ -47,7 +48,8 @@ class Userupdate extends Component
             'profile_phone_number' => $this->profile_phone_number,
             'profile_address' => $this->profile_address,
         ]);
-            return redirect()->to('/listuser');
+
+        return redirect()->to('/listuser');
     }
 
     public function render()

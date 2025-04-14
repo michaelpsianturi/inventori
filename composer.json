@@ -6,6 +6,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.3",
+        "filament/filament": "^3.3",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/fortify": "*",
         "laravel/framework": "^12.0",
@@ -16,10 +17,12 @@
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
-        "laravel/pint": "^1.0",
+        "larastan/larastan": "^3.0",
+        "laravel/pint": "^1.22",
         "laravel/sail": "^1.18",
         "mockery/mockery": "^1.4.4",
         "nunomaduro/collision": "^8.7.0",
+        "phpstan/phpstan": "^2.1",
         "phpunit/phpunit": "^11.0",
         "spatie/laravel-ignition": "^2.0"
     },
@@ -38,7 +41,8 @@
     "scripts": {
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover --ansi"
+            "@php artisan package:discover --ansi",
+            "@php artisan filament:upgrade"
         ],
         "post-update-cmd": [
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
@@ -48,6 +52,13 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
+        ],
+        "lint": "pint",
+        "test:lint": "pint --test",
+        "test:types": "phpstan analyse",
+        "test": [
+            "@test:lint",
+            "@test:types"
         ]
     },
     "extra": {

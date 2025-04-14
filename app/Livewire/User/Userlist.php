@@ -2,8 +2,8 @@
 
 namespace App\Livewire\User;
 
-use Livewire\Component;
 use App\Models\datauser;
+use Livewire\Component;
 use Livewire\WithPagination;
 
 class Userlist extends Component
@@ -15,6 +15,7 @@ class Userlist extends Component
         $datauser = datauser::Where('id', $id)->first();
         if ($datauser) {
             $datauser->delete();
+
             return redirect()->to('/listuser');
         }
     }
@@ -22,7 +23,7 @@ class Userlist extends Component
     public function render()
     {
         return view('sidebar.listuser', [
-            'datausers' =>  datauser::paginate(9)
+            'datausers' => datauser::paginate(9),
         ]);
     }
 }

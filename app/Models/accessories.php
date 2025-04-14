@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class accessories extends Model
+class Accessories extends Model
 {
     use HasFactory;
 
@@ -16,11 +16,5 @@ class accessories extends Model
         'accessories_price',
         'accessories_serial_number',
         'accessories_stock',
-        'datauser_id'
     ];
-
-    public function datauser()
-    {
-        return $this->belongsTo(datauser::class);
-    }
 }

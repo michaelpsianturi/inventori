@@ -2,8 +2,8 @@
 
 namespace App\Livewire\Asset;
 
-use Livewire\Component;
 use App\Models\asset;
+use Livewire\Component;
 use Livewire\WithPagination;
 
 class Assetlist extends Component
@@ -15,6 +15,7 @@ class Assetlist extends Component
         $asset = asset::where('id', $id)->first();
         if ($asset) {
             $asset->delete();
+
             return redirect()->to('/asset');
         }
     }
@@ -22,7 +23,7 @@ class Assetlist extends Component
     public function render()
     {
         return view('sidebar.asset', [
-            'assets' => asset::paginate(9)
+            'assets' => asset::paginate(9),
         ]);
     }
 }

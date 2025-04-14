@@ -2,9 +2,9 @@
 
 namespace App\Livewire\Histori;
 
+use App\Models\HistoriLog;
 use Livewire\Component;
 use Livewire\WithPagination;
-use App\Models\HistoriLog;
 
 class ActivityLog extends Component
 {
@@ -13,7 +13,7 @@ class ActivityLog extends Component
     public function render()
     {
         return view('livewire.histori.activity-log', [
-            'HistoriLogs' => HistoriLog::paginate(9)
+            'HistoriLogs' => HistoriLog::paginate(9),
         ]);
     }
 }

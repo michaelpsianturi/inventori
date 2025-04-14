@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class asset extends Model
+class Asset extends Model
 {
     use HasFactory;
 
@@ -17,13 +17,7 @@ class asset extends Model
         'product_serial_number',
         'product_stock',
         'description',
-        'datauser_id'
     ];
-
-    public function datauser()
-    {
-        return $this->belongsTo(datauser::class);
-    }
 
     public function HistoriLogs()
     {
