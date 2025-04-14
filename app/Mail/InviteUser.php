@@ -37,7 +37,7 @@ class InviteUser extends Mailable
     {
         return new Content(
             view: 'emails.team-invitation',
-            with: ['name' => $this->name]
+            // with: ['name' => $this->name]
         );
     }
 

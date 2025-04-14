@@ -16,13 +16,13 @@ class HistoriLog extends Model
         'name',
     ];
 
-    public function assets()
-    {
-        return $this->belongsToMany(asset::class, 'assets');
-    }
+    // public function assets()
+    // {
+    //     return $this->belongsToMany(asset::class, 'assets');
+    // }
 
-    public function Accessories()
-    {
-        return $this->belongsToMany(accessories::class, 'Accessories');
-    }
+    // public function Accessories()
+    // {
+    //     return $this->belongsToMany(accessories::class, 'Accessories');
+    // }
 }
