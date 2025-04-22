@@ -24,7 +24,7 @@ class TaskManagementPanelProvider extends PanelProvider
     {
         return $panel
             ->id('taskManagement')
-            ->path('taskManagement')
+            ->path('task-management')
             ->colors([
                 'primary' => Color::Amber,
             ])
